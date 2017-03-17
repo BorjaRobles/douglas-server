@@ -1,0 +1,1636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c4c4bbc5-5f87-448c-99e6-6e43c2a40db4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build_ant/douglas/domain/Test.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build_ant/douglas/persistence/ProductDao.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/Queueable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/TestExecution.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/TestQueue.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build_ant/douglas/util/GenerateNewCSSSelector.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build_ant/douglas/web/controller/QueueProcessor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build_ant/douglas/util/css-selector-generator.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/douglas.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/douglas/testrunner/Queueable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/douglas/testrunner/TestExecution.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build_ant/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/domain/Test.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/persistence/ProductDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/TestQueue.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/util/GenerateNewCSSSelector.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/web/controller/QueueProcessor.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/static/assets/main.css" afterPath="$PROJECT_DIR$/WebContent/static/assets/main.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/static/assets/main.js" afterPath="$PROJECT_DIR$/WebContent/static/assets/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/static/css-selector-generator.min.js" afterPath="$PROJECT_DIR$/WebContent/css-selector-generator.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/static/index.html" afterPath="$PROJECT_DIR$/WebContent/static/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/static/views/products.html" afterPath="$PROJECT_DIR$/WebContent/static/views/products.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/static/views/result.html" afterPath="$PROJECT_DIR$/WebContent/static/views/result.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/static/views/sections.html" afterPath="$PROJECT_DIR$/WebContent/static/views/sections.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/static/views/test.html" afterPath="$PROJECT_DIR$/WebContent/static/views/test.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/Douglas.class" afterPath="$PROJECT_DIR$/build_ant/douglas/Douglas.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/domain/Product.class" afterPath="$PROJECT_DIR$/build_ant/douglas/domain/Product.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/domain/Section.class" afterPath="$PROJECT_DIR$/build_ant/douglas/domain/Section.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/domain/Test$TestStatus.class" afterPath="$PROJECT_DIR$/build_ant/douglas/domain/Test$TestStatus.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/domain/TestResult$TestResultStatus.class" afterPath="$PROJECT_DIR$/build_ant/douglas/domain/TestResult$TestResultStatus.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/domain/TestResult.class" afterPath="$PROJECT_DIR$/build_ant/douglas/domain/TestResult.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/persistence/SectionDao.class" afterPath="$PROJECT_DIR$/build_ant/douglas/persistence/SectionDao.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/persistence/TestDao.class" afterPath="$PROJECT_DIR$/build_ant/douglas/persistence/TestDao.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/persistence/TestResultDao.class" afterPath="$PROJECT_DIR$/build_ant/douglas/persistence/TestResultDao.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/spring/config/RootConfig.class" afterPath="$PROJECT_DIR$/build_ant/douglas/spring/config/RootConfig.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/spring/config/WebAppInitializer.class" afterPath="$PROJECT_DIR$/build_ant/douglas/spring/config/WebAppInitializer.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/spring/config/WebConfig.class" afterPath="$PROJECT_DIR$/build_ant/douglas/spring/config/WebConfig.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/ActionDispatcher$TestResultStepStatus.class" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/ActionDispatcher$TestResultStepStatus.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/ActionDispatcher.class" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/ActionDispatcher.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/ElementLocaterEngine.class" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/ElementLocaterEngine.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/MetaHandler.class" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/MetaHandler.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/StepException.class" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/StepException.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/TestException.class" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/TestException.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/TestRunner.class" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/TestRunner.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/TestStep.class" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/TestStep.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/actions/AbstractAction.class" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/actions/AbstractAction.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/actions/Action.class" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/actions/Action.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/actions/ActionAssertContainsText.class" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/actions/ActionAssertContainsText.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/actions/ActionClick.class" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/actions/ActionClick.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/actions/ActionType.class" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/actions/ActionType.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/testrunner/actions/ActionUrl.class" afterPath="$PROJECT_DIR$/build_ant/douglas/testrunner/actions/ActionUrl.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/util/StepParser.class" afterPath="$PROJECT_DIR$/build_ant/douglas/util/StepParser.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/web/controller/MainController.class" afterPath="$PROJECT_DIR$/build_ant/douglas/web/controller/MainController.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/web/controller/v1/ProductController.class" afterPath="$PROJECT_DIR$/build_ant/douglas/web/controller/v1/ProductController.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/web/controller/v1/SectionController.class" afterPath="$PROJECT_DIR$/build_ant/douglas/web/controller/v1/SectionController.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/web/controller/v1/SuggestionController.class" afterPath="$PROJECT_DIR$/build_ant/douglas/web/controller/v1/SuggestionController.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/web/controller/v1/TestController.class" afterPath="$PROJECT_DIR$/build_ant/douglas/web/controller/v1/TestController.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/douglas/web/controller/v1/TestResultController.class" afterPath="$PROJECT_DIR$/build_ant/douglas/web/controller/v1/TestResultController.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/antlr-2.7.7.jar" afterPath="$PROJECT_DIR$/build_ant/lib/antlr-2.7.7.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/cdi-api-1.1.jar" afterPath="$PROJECT_DIR$/build_ant/lib/cdi-api-1.1.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/cglib-nodep-2.1_3.jar" afterPath="$PROJECT_DIR$/build_ant/lib/cglib-nodep-2.1_3.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/classmate-1.3.0.jar" afterPath="$PROJECT_DIR$/build_ant/lib/classmate-1.3.0.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/commons-codec-1.10.jar" afterPath="$PROJECT_DIR$/build_ant/lib/commons-codec-1.10.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/commons-collections-3.2.1.jar" afterPath="$PROJECT_DIR$/build_ant/lib/commons-collections-3.2.1.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/commons-exec-1.3.jar" afterPath="$PROJECT_DIR$/build_ant/lib/commons-exec-1.3.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/commons-io-2.4.jar" afterPath="$PROJECT_DIR$/build_ant/lib/commons-io-2.4.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/commons-lang3-3.4.jar" afterPath="$PROJECT_DIR$/build_ant/lib/commons-lang3-3.4.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/commons-logging-1.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/commons-logging-1.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/cssparser-0.9.16.jar" afterPath="$PROJECT_DIR$/build_ant/lib/cssparser-0.9.16.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/dom4j-1.6.1.jar" afterPath="$PROJECT_DIR$/build_ant/lib/dom4j-1.6.1.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/el-api-2.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/el-api-2.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/geronimo-jta_1.1_spec-1.1.1.jar" afterPath="$PROJECT_DIR$/build_ant/lib/geronimo-jta_1.1_spec-1.1.1.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/gson-2.3.1.jar" afterPath="$PROJECT_DIR$/build_ant/lib/gson-2.3.1.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/guava-18.0.jar" afterPath="$PROJECT_DIR$/build_ant/lib/guava-18.0.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/hamcrest-core-1.1.jar" afterPath="$PROJECT_DIR$/build_ant/lib/hamcrest-core-1.1.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar" afterPath="$PROJECT_DIR$/build_ant/lib/hibernate-commons-annotations-5.0.1.Final.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/hibernate-core-5.2.4.Final.jar" afterPath="$PROJECT_DIR$/build_ant/lib/hibernate-core-5.2.4.Final.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" afterPath="$PROJECT_DIR$/build_ant/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/htmlunit-2.18.jar" afterPath="$PROJECT_DIR$/build_ant/lib/htmlunit-2.18.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/htmlunit-core-js-2.17.jar" afterPath="$PROJECT_DIR$/build_ant/lib/htmlunit-core-js-2.17.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/httpclient-4.5.1.jar" afterPath="$PROJECT_DIR$/build_ant/lib/httpclient-4.5.1.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/httpcore-4.4.3.jar" afterPath="$PROJECT_DIR$/build_ant/lib/httpcore-4.4.3.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/httpmime-4.5.jar" afterPath="$PROJECT_DIR$/build_ant/lib/httpmime-4.5.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jackson-annotations-2.8.0.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jackson-annotations-2.8.0.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jackson-core-2.8.5.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jackson-core-2.8.5.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jackson-databind-2.8.5.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jackson-databind-2.8.5.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jackson-datatype-hibernate5-2.8.5.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jackson-datatype-hibernate5-2.8.5.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jandex-2.0.0.Final.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jandex-2.0.0.Final.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/javassist-3.20.0-GA.jar" afterPath="$PROJECT_DIR$/build_ant/lib/javassist-3.20.0-GA.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/javax.inject-1.jar" afterPath="$PROJECT_DIR$/build_ant/lib/javax.inject-1.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterPath="$PROJECT_DIR$/build_ant/lib/javax.servlet-api-3.1.0.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jboss-logging-3.3.0.Final.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jetty-http-9.3.14.v20161028.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jetty-http-9.3.14.v20161028.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jetty-io-9.3.14.v20161028.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jetty-io-9.3.14.v20161028.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jetty-security-9.3.14.v20161028.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jetty-security-9.3.14.v20161028.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jetty-server-9.3.14.v20161028.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jetty-server-9.3.14.v20161028.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jetty-servlet-9.3.14.v20161028.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jetty-servlet-9.3.14.v20161028.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jetty-util-9.3.14.v20161028.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jetty-util-9.3.14.v20161028.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jetty-webapp-9.3.14.v20161028.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jetty-webapp-9.3.14.v20161028.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jetty-xml-9.3.14.v20161028.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jetty-xml-9.3.14.v20161028.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jna-4.1.0.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jna-4.1.0.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jna-platform-4.1.0.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jna-platform-4.1.0.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/json-simple-1.1.1.jar" afterPath="$PROJECT_DIR$/build_ant/lib/json-simple-1.1.1.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jsr250-api-1.0.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jsr250-api-1.0.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/jta-1.1.jar" afterPath="$PROJECT_DIR$/build_ant/lib/jta-1.1.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/junit-4.10.jar" afterPath="$PROJECT_DIR$/build_ant/lib/junit-4.10.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/log4j-1.2.17.jar" afterPath="$PROJECT_DIR$/build_ant/lib/log4j-1.2.17.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/mysql-connector-java-5.1.39.jar" afterPath="$PROJECT_DIR$/build_ant/lib/mysql-connector-java-5.1.39.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/nekohtml-1.9.22.jar" afterPath="$PROJECT_DIR$/build_ant/lib/nekohtml-1.9.22.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/netty-3.5.2.Final.jar" afterPath="$PROJECT_DIR$/build_ant/lib/netty-3.5.2.Final.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/sac-1.3.jar" afterPath="$PROJECT_DIR$/build_ant/lib/sac-1.3.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/selenium-api-2.48.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/selenium-api-2.48.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/selenium-chrome-driver-2.48.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/selenium-chrome-driver-2.48.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/selenium-edge-driver-2.48.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/selenium-edge-driver-2.48.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/selenium-firefox-driver-2.48.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/selenium-firefox-driver-2.48.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/selenium-htmlunit-driver-2.48.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/selenium-htmlunit-driver-2.48.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/selenium-ie-driver-2.48.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/selenium-ie-driver-2.48.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/selenium-java-2.48.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/selenium-java-2.48.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/selenium-leg-rc-2.48.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/selenium-leg-rc-2.48.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/selenium-remote-driver-2.48.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/selenium-remote-driver-2.48.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/selenium-safari-driver-2.48.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/selenium-safari-driver-2.48.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/selenium-support-2.48.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/selenium-support-2.48.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/serializer-2.7.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/serializer-2.7.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-aop-4.3.3.RELEASE.jar" afterPath="$PROJECT_DIR$/build_ant/lib/spring-aop-4.3.3.RELEASE.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-beans-4.3.3.RELEASE.jar" afterPath="$PROJECT_DIR$/build_ant/lib/spring-beans-4.3.3.RELEASE.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-context-4.3.3.RELEASE.jar" afterPath="$PROJECT_DIR$/build_ant/lib/spring-context-4.3.3.RELEASE.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-core-4.3.3.RELEASE.jar" afterPath="$PROJECT_DIR$/build_ant/lib/spring-core-4.3.3.RELEASE.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-expression-4.3.3.RELEASE.jar" afterPath="$PROJECT_DIR$/build_ant/lib/spring-expression-4.3.3.RELEASE.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-jdbc-4.3.3.RELEASE.jar" afterPath="$PROJECT_DIR$/build_ant/lib/spring-jdbc-4.3.3.RELEASE.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-orm-4.3.3.RELEASE.jar" afterPath="$PROJECT_DIR$/build_ant/lib/spring-orm-4.3.3.RELEASE.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-tx-4.3.3.RELEASE.jar" afterPath="$PROJECT_DIR$/build_ant/lib/spring-tx-4.3.3.RELEASE.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-web-4.3.3.RELEASE.jar" afterPath="$PROJECT_DIR$/build_ant/lib/spring-web-4.3.3.RELEASE.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-webmvc-4.3.3.RELEASE.jar" afterPath="$PROJECT_DIR$/build_ant/lib/spring-webmvc-4.3.3.RELEASE.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-websocket-4.3.3.RELEASE.jar" afterPath="$PROJECT_DIR$/build_ant/lib/spring-websocket-4.3.3.RELEASE.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/webbit-0.4.14.jar" afterPath="$PROJECT_DIR$/build_ant/lib/webbit-0.4.14.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/websocket-api-9.2.12.v20150709.jar" afterPath="$PROJECT_DIR$/build_ant/lib/websocket-api-9.2.12.v20150709.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/websocket-client-9.2.12.v20150709.jar" afterPath="$PROJECT_DIR$/build_ant/lib/websocket-client-9.2.12.v20150709.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/websocket-common-9.2.12.v20150709.jar" afterPath="$PROJECT_DIR$/build_ant/lib/websocket-common-9.2.12.v20150709.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/xalan-2.7.2.jar" afterPath="$PROJECT_DIR$/build_ant/lib/xalan-2.7.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/xercesImpl-2.11.0.jar" afterPath="$PROJECT_DIR$/build_ant/lib/xercesImpl-2.11.0.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/lib/xml-apis-1.4.01.jar" afterPath="$PROJECT_DIR$/build_ant/lib/xml-apis-1.4.01.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/log4j.properties" afterPath="$PROJECT_DIR$/build_ant/log4j.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/persistence.properties" afterPath="$PROJECT_DIR$/build_ant/persistence.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/static/assets/main.css" afterPath="$PROJECT_DIR$/build_ant/static/assets/main.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/static/assets/main.js" afterPath="$PROJECT_DIR$/build_ant/static/assets/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/static/css-selector-generator.min.js" afterPath="$PROJECT_DIR$/build_ant/css-selector-generator.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/static/index.html" afterPath="$PROJECT_DIR$/build_ant/static/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/static/views/products.html" afterPath="$PROJECT_DIR$/build_ant/static/views/products.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/static/views/result.html" afterPath="$PROJECT_DIR$/build_ant/static/views/result.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/static/views/sections.html" afterPath="$PROJECT_DIR$/build_ant/static/views/sections.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/build_ant/WEB-INF/static/views/test.html" afterPath="$PROJECT_DIR$/build_ant/static/views/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/douglas.iml" afterPath="$PROJECT_DIR$/douglas.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/domain/Product.java" afterPath="$PROJECT_DIR$/src/douglas/domain/Product.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/domain/Section.java" afterPath="$PROJECT_DIR$/src/douglas/domain/Section.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/domain/Test.java" afterPath="$PROJECT_DIR$/src/douglas/domain/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/persistence/ProductDao.java" afterPath="$PROJECT_DIR$/src/douglas/persistence/ProductDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/persistence/TestDao.java" afterPath="$PROJECT_DIR$/src/douglas/persistence/TestDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/testrunner/ActionDispatcher.java" afterPath="$PROJECT_DIR$/src/douglas/testrunner/ActionDispatcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/testrunner/TestQueue.java" afterPath="$PROJECT_DIR$/src/douglas/testrunner/TestQueue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/testrunner/TestRunner.java" afterPath="$PROJECT_DIR$/src/douglas/testrunner/TestRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/util/GenerateNewCSSSelector.java" afterPath="$PROJECT_DIR$/src/douglas/util/GenerateNewCSSSelector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/web/controller/QueueProcessor.java" afterPath="$PROJECT_DIR$/src/douglas/web/controller/QueueProcessor.java" />
+    </list>
+    <ignored path="douglas.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="douglas" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="TestQueue.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/TestQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <element signature="e#509#510#0" expanded="true" />
+                <element signature="e#547#548#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Douglas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/douglas/Douglas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueueProcessor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/douglas/web/controller/QueueProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1365">
+              <caret line="114" column="13" lean-forward="false" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/douglas/web/controller/v1/TestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+              <folding>
+                <element signature="e#1492#1493#0" expanded="true" />
+                <element signature="e#1526#1527#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestRunner.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/TestRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="77" column="22" lean-forward="false" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionDispatcher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/ActionDispatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/douglas/web/controller/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <folding>
+                <element signature="e#248#249#0" expanded="true" />
+                <element signature="e#292#293#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/douglas/persistence/TestDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1110">
+              <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SuggestionController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/douglas/web/controller/v1/SuggestionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>web</find>
+      <find>error</find>
+      <find>ERROR</find>
+      <find>notifyS</find>
+      <find>Product</find>
+      <find>serializeAllExcept</find>
+      <find>Hibernate5</find>
+      <find>getContex</find>
+      <find>click</find>
+      <find>(test)</find>
+      <find>teststa</find>
+      <find>staticResourcePaths</find>
+      <find>result</find>
+      <find>START1</find>
+      <find>FJOL</find>
+      <find>build.home</find>
+      <find>classes</find>
+      <find>filter</find>
+      <find>getCorsFilter</find>
+      <find>spring</find>
+      <find>cors</find>
+      <find>productId</find>
+      <find>static</find>
+      <find>currentStep</find>
+      <find>test</find>
+      <find>WEB-INF</find>
+      <find>mkdir</find>
+      <find>lib</find>
+      <find>compile</find>
+      <find>exception</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Section</replace>
+      <replace>(testResult)</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/actions/Action.java" />
+        <option value="$PROJECT_DIR$/src/static/fjol.html" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/StepException.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/actions/AbstractAction.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/MetaFetcher.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/TestStep.java" />
+        <option value="$PROJECT_DIR$/src/douglas/util/JsonParser.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/actions/ActionType.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/actions/ActionAssertContainsText.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/actions/ActionUrl.java" />
+        <option value="$PROJECT_DIR$/src/douglas/util/LoadCSSSelectorGenerator.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/actions/ActionClick.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/ElementLocaterEngine.java" />
+        <option value="$PROJECT_DIR$/WebContent/index.html" />
+        <option value="$PROJECT_DIR$/src/douglas/spring/config/RootConfig.java" />
+        <option value="$PROJECT_DIR$/src/douglas/web/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/build_ant/WEB-INF/static/index.html" />
+        <option value="$PROJECT_DIR$/build_ant/WEB-INF/index.html" />
+        <option value="$PROJECT_DIR$/src/douglas/util/ConfigurationParser.java" />
+        <option value="$PROJECT_DIR$/src/douglas/Main.java" />
+        <option value="$PROJECT_DIR$/src/douglas/spring/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/douglas/persistence/TestResultDao.java" />
+        <option value="$PROJECT_DIR$/src/douglas/web/controller/v1/TestResultController.java" />
+        <option value="$PROJECT_DIR$/src/douglas/Douglas.java" />
+        <option value="$PROJECT_DIR$/src/douglas/web/controller/v1/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/douglas/web/controller/v1/SectionController.java" />
+        <option value="$PROJECT_DIR$/src/douglas/persistence/SectionDao.java" />
+        <option value="$PROJECT_DIR$/src/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/douglas/web/controller/v1/TestController.java" />
+        <option value="$PROJECT_DIR$/src/douglas/util/StepParser.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/MetaHandler.java" />
+        <option value="$PROJECT_DIR$/src/douglas/web/controller/v1/SuggestionController.java" />
+        <option value="$PROJECT_DIR$/src/douglas/spring/config/WebAppInitializer.java" />
+        <option value="$PROJECT_DIR$/src/douglas/domain/Run.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/Run.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/Queueable.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/TestExecution.java" />
+        <option value="$PROJECT_DIR$/src/douglas/domain/Test.java" />
+        <option value="$PROJECT_DIR$/src/douglas/domain/Product.java" />
+        <option value="$PROJECT_DIR$/src/douglas/domain/Section.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/TestQueue.java" />
+        <option value="$PROJECT_DIR$/src/douglas/persistence/ProductDao.java" />
+        <option value="$PROJECT_DIR$/src/douglas/web/controller/QueueProcessor.java" />
+        <option value="$PROJECT_DIR$/WebContent/META-INF/MANIFEST.MF" />
+        <option value="$PROJECT_DIR$/src/persistence.properties" />
+        <option value="$PROJECT_DIR$/WebContent/static/assets/main.js" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/src/douglas/util/GenerateNewCSSSelector.java" />
+        <option value="$PROJECT_DIR$/src/douglas/persistence/TestDao.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/TestRunner.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/ActionDispatcher.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="55" />
+    <option name="y" value="23" />
+    <option name="width" value="1385" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="v1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testrunner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="douglas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build_ant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="TestQueue&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/TestQueue.java&#10;build&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/build.xml&#10;ActionD&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/ActionDispatcher.java&#10;ElementL&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/ElementLocaterEngine.java&#10;test&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/domain/Test.java&#10;test.java&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/domain/Test.java&#10;proper&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/persistence.properties&#10;persistence.&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/persistence.properties&#10;SectionDao&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/persistence/SectionDao.java&#10;webconfi&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;configurationPa&#9;PSI&#9;JAVA://douglas.util.ConfigurationParser&#10;index&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/WebContent/WEB-INF/index.html&#10;Test&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/domain/Test.java&#10;webconfig&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;WebCon&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;que&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/web/controller/QueueProcessor.java&#10;buil&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/build.xml&#10;ElementLo&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/ElementLocaterEngine.java&#10;Queu&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/web/controller/QueueProcessor.java&#10;main&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/web/controller/MainController.java&#10;Webc&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;webc&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;MetaHand&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/MetaHandler.java&#10;fjol.html&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/static/fjol.html&#10;webdriverEx&#9;FILE&#9;jar:///Users/mads/Dropbox/AU/Speciale/douglas/build_ant/WEB-INF/lib/selenium-api-2.48.2.jar!/org/openqa/selenium/WebDriverException.class&#10;testresult&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/persistence/TestResultDao.java&#10;RemoteDriver&#9;PSI&#9;JAVA://org.openqa.selenium.remote.RemoteWebDriver&#10;testda&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/persistence/TestDao.java&#10;root&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/RootConfig.java&#10;FileNotF&#9;PSI&#9;JAVA://java.io.FileNotFoundException" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v6.3.1/bin/node" />
+    <property name="js.eslint.eslintPackage" value="$USER_HOME$/.nvm/versions/node/v6.3.1/lib/node_modules/eslint" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="douglas.testrunner" />
+      <recent name="douglas.persistence" />
+      <recent name="douglas.testrunner.actions" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="douglas.web.controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="douglas.web.controller.v1" />
+      <recent name="douglas.persistence" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebContent" />
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/static" />
+      <recent name="$PROJECT_DIR$/src/douglas" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Douglas-ant">
+    <configuration default="false" name="Douglas-ant" type="Application" factoryName="Application" singleton="true" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="douglas.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="douglas.Douglas" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="douglas" />
+      <envs />
+      <method>
+        <option name="Make" enabled="false" />
+        <option name="AntTarget" enabled="true" antfile="file://$PROJECT_DIR$/build.xml" target="compile" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="false" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="douglas" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="Debug JAR" type="JarApplication" factoryName="JAR Application" singleton="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/dist/douglas.jar" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <envs />
+      <method>
+        <option name="AntTarget" enabled="true" antfile="file://$PROJECT_DIR$/build.xml" target="dist" />
+      </method>
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="JAR Application.Debug JAR" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Douglas-ant" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Douglas-ant" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4c4bbc5-5f87-448c-99e6-6e43c2a40db4" name="Default" comment="" />
+      <created>1447960429181</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1447960429181</updated>
+      <workItem from="1447960430388" duration="36040000" />
+      <workItem from="1479661059085" duration="907000" />
+      <workItem from="1479744229591" duration="647000" />
+      <workItem from="1479747317570" duration="940000" />
+      <workItem from="1479748967110" duration="1140000" />
+      <workItem from="1479833228881" duration="355000" />
+      <workItem from="1479833631542" duration="63000" />
+      <workItem from="1479834798859" duration="1329000" />
+      <workItem from="1479836418350" duration="1089000" />
+      <workItem from="1479838523583" duration="20240000" />
+      <workItem from="1480351798510" duration="4772000" />
+      <workItem from="1480855398788" duration="8669000" />
+      <workItem from="1481041118940" duration="4606000" />
+      <workItem from="1481400173892" duration="2249000" />
+      <workItem from="1481472924547" duration="5429000" />
+      <workItem from="1481568711914" duration="409000" />
+      <workItem from="1483279567639" duration="8636000" />
+      <workItem from="1483385829489" duration="9437000" />
+      <workItem from="1483717158249" duration="5824000" />
+      <workItem from="1483803860405" duration="3406000" />
+      <workItem from="1483818118050" duration="1141000" />
+      <workItem from="1483883742330" duration="4671000" />
+      <workItem from="1483898186327" duration="2551000" />
+      <workItem from="1483986763541" duration="3217000" />
+      <workItem from="1484238939252" duration="3604000" />
+      <workItem from="1484338923990" duration="86000" />
+      <workItem from="1484403769896" duration="4776000" />
+      <workItem from="1484483861782" duration="7351000" />
+      <workItem from="1484499101592" duration="53000" />
+      <workItem from="1484668276527" duration="5725000" />
+      <workItem from="1485004421352" duration="747000" />
+      <workItem from="1485079363408" duration="1032000" />
+      <workItem from="1485431022627" duration="7588000" />
+      <workItem from="1485708568903" duration="4344000" />
+      <workItem from="1485878933655" duration="2019000" />
+      <workItem from="1485883707404" duration="172000" />
+      <workItem from="1486302082808" duration="52000" />
+      <workItem from="1486306288240" duration="5920000" />
+      <workItem from="1486493709650" duration="1818000" />
+      <workItem from="1486542264219" duration="24950000" />
+      <workItem from="1486733667167" duration="8824000" />
+      <workItem from="1486752353625" duration="296000" />
+      <workItem from="1486761494788" duration="813000" />
+      <workItem from="1486896656649" duration="2040000" />
+      <workItem from="1486900914676" duration="4677000" />
+      <workItem from="1487495023306" duration="189000" />
+      <workItem from="1487502863052" duration="2471000" />
+      <workItem from="1487669511496" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="217323000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="55" y="23" width="1385" height="877" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33992094" sideWeight="0.4028295" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329142" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938075" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.49740162" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25614297" sideWeight="0.6467066" order="0" side_tool="true" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24943481" sideWeight="0.26703754" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25614297" sideWeight="0.35329342" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33992094" sideWeight="0.59717053" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31093544" sideWeight="0.47431123" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.49704143" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.4973939" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>jar://$PROJECT_DIR$/build_ant/WEB-INF/lib/jetty-util-9.2.12.v20150709.jar!/org/eclipse/jetty/util/component/ContainerLifeCycle.class</url>
+          <line>634</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/douglas/spring/config/WebAppInitializer.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/douglas/spring/config/WebAppInitializer.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/douglas/domain/Test.java</url>
+          <line>76</line>
+          <properties />
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint type="java-exception">
+          <properties>
+            <option name="NOTIFY_CAUGHT" value="false" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="157" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/build.xml">
+      <targetFilters>
+        <filter targetName="prepare" isVisible="false" />
+        <filter targetName="prepare-test" isVisible="false" />
+        <filter targetName="compile" isVisible="true" />
+        <filter targetName="compile-test" isVisible="true" />
+        <filter targetName="test" isVisible="false" />
+        <filter targetName="dist" isVisible="true" />
+        <filter targetName="clean" isVisible="true" />
+      </targetFilters>
+      <expanded value="true" />
+    </buildFile>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-webmvc-4.3.3.RELEASE.jar!/org/springframework/web/servlet/config/annotation/ResourceHandlerRegistry.class" />
+    <entry file="file://$PROJECT_DIR$/ivysettings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="26" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-webmvc-4.3.3.RELEASE.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurerAdapter.class" />
+    <entry file="jar://$PROJECT_DIR$/build_ant/WEB-INF/lib/hibernate-core-5.2.4.Final.jar!/org/hibernate/Session.class" />
+    <entry file="file://$PROJECT_DIR$/build_ant/WEB-INF/index.html" />
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/index.html" />
+    <entry file="file://$PROJECT_DIR$/build_ant/WEB-INF/static/index.html" />
+    <entry file="file://$PROJECT_DIR$/configuration.json" />
+    <entry file="file://$PROJECT_DIR$/src/douglas/util/ConfigurationParser.java" />
+    <entry file="file://$PROJECT_DIR$/src/douglas/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/douglas/spring/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-791">
+          <caret line="31" column="94" lean-forward="false" selection-start-line="31" selection-start-column="94" selection-end-line="31" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/web/controller/v1/TestResultController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="49" column="32" lean-forward="false" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/persistence/TestResultDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/actions/ActionClick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-tx-4.3.3.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class" />
+    <entry file="file://$PROJECT_DIR$/src/douglas/web/controller/v1/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="3095" column="9" lean-forward="true" selection-start-line="3095" selection-start-column="9" selection-end-line="3095" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="652" column="0" lean-forward="false" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/build_ant/WEB-INF/lib/spring-core-4.3.3.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class" />
+    <entry file="file://$PROJECT_DIR$/src/douglas/util/StepParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/MetaHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="36" column="48" lean-forward="false" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/spring/config/WebAppInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding>
+            <element signature="e#647#648#0" expanded="false" />
+            <element signature="e#702#703#0" expanded="false" />
+            <element signature="e#763#764#0" expanded="false" />
+            <element signature="e#804#805#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/Queueable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/TestExecution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/domain/TestResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/domain/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/persistence/ProductDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="54" column="18" lean-forward="false" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build_ant/META-INF/MANIFEST.MF" />
+    <entry file="file://$PROJECT_DIR$/WebContent/META-INF/MANIFEST.MF" />
+    <entry file="file://$PROJECT_DIR$/ivy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/persistence.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5580">
+          <caret line="435" column="0" lean-forward="false" selection-start-line="435" selection-start-column="0" selection-end-line="435" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/domain/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/domain/Section.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/static/assets/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="107" lean-forward="false" selection-start-line="51" selection-start-column="107" selection-end-line="51" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/web/controller/v1/SectionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/persistence/SectionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/util/GenerateNewCSSSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="51" column="12" lean-forward="false" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/ElementLocaterEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../testqueue-diaag.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="-208.0" y="-65.0">douglas.testrunner.TestQueue</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-262.0" y="17.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Inner Classes</Category>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/TestQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/Douglas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/web/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/web/controller/QueueProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="114" column="13" lean-forward="false" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/web/controller/v1/SuggestionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/persistence/TestDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/web/controller/v1/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding>
+            <element signature="e#1492#1493#0" expanded="true" />
+            <element signature="e#1526#1527#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/ActionDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/TestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="77" column="22" lean-forward="false" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>douglas</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>douglas</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,58 @@
+<div class="TestCtrl">
+  <a class="btn btn-primary" ng-href="#/products/{{productId}}" role="button">⇽ Back to sections</a>
+  <span class="btn btn-success btn-run" ng-click="run(test.id, $event)" role="button">Run ▶</span>
+  <hr>
+  <h3>Test case: {{test.name}}
+    <span class="badge badge-default" ng-if="test.testStatus == null">Not run yet</span>
+    <span class="badge badge-success" ng-if="test.testStatus == 'Passed'">Passed</span>
+    <span class="badge badge-danger" ng-if="test.testStatus == 'Failed'">Failed</span>
+    <span class="badge badge-warning" ng-if="test.testStatus == 'Unstable'">Unstable</span>
+  </h3>
+  <p>{{test.description}}<p>
+  <hr>
+  <p class="lead">Steps:</p>
+  <div ng-repeat="step in steps" class="card card-outline-primary mb-3"
+    ng-class="{
+      'card-outline-success':step.status == 'passed',
+      'card-outline-warning':step.status == 'unstable',
+      'card-outline-danger':step.status == 'failed'
+      }">
+    <div class="card-block">
+      <blockquote class="card-blockquote">
+        <h4 class="card-title">   
+          <span class="badge badge-default" ng-if="step.status == null">Didn't run</span>
+          <span class="badge badge-success" ng-if="step.status == 'passed'">Passed</span>
+          <span class="badge badge-danger" ng-if="step.status == 'failed'">Failed</span>
+          <span class="badge badge-warning" ng-if="step.status == 'unstable'">Unstable</span>
+        {{step.action}} 
+        </h4>
+        <p ng-if="step.value"><strong>Value:</strong> {{step.value}}</p>
+        <p><strong>Selector:</strong> {{step.path}}</p>
+      </blockquote>
+      <div ng-if="step.status == 'unstable'">
+        <hr>
+        <p class="lead">The step has become unstable because things on the website have changed</p>
+        <p>Douglas recovered from the changes and located the element anyway. Is the following element correct?
+        <div class="card card-outline-success">
+          <div class="card-block">
+            <p ng-if="step.suggestion.path"><strong>Value:</strong> {{step.suggestion.meta.content}}</p>
+            <p><strong>Selector:</strong> {{step.suggestion.path}}</p>
+            <span class="btn btn-success" ng-click="acceptSuggestion(currentTestResultId, $index, $event)" role="button">Accept suggestion</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <p class="lead">Previous results:</p>
+  <ul class="list-group">
+    <p ng-if="!test.testResults.length">The test hasn't been executed before</p>
+    <a ng-if="test.steps.length" class="list-group-item list-group-item-action d-flex justify-content-end" ng-repeat="result in reverse(test.testResults)" ng-href="#/products/{{productId}}/testresult/{{result.id}}">
+      <strong class="mr-auto">{{result.name}} - #{{result.id}}</strong>
+      <span class="badge badge-default badge-pill" ng-if="result.testResultStatus == null">Not run yet</span>
+      <span class="badge badge-success badge-pill" ng-if="result.testResultStatus == 'Passed'">Passed</span>
+      <span class="badge badge-danger badge-pill" ng-if="result.testResultStatus == 'Failed'">Failed</span>
+      <span class="badge badge-warning badge-pill" ng-if="result.testResultStatus == 'Unstable'">Unstable</span>
+    </a>
+  </ul>
+</div>

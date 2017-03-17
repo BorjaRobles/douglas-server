@@ -1,0 +1,30 @@
+<div class="ResultCtrl">
+  <a class="btn btn-primary" ng-href="#/products/{{productId}}/test/{{result.test}}" role="button">⇽ Back to test</a>
+  <hr>
+  <h3>Result from test case: {{result.name}}
+    <span class="badge badge-success" ng-if="result.testResultStatus == 'Passed'">Passed</span>
+    <span class="badge badge-danger" ng-if="result.testResultStatus == 'Failed'">Failed</span>
+    <span class="badge badge-warning badge-pill" ng-if="result.testResultStatus == 'Unstable'">Unstable</span>
+  </h3>
+  <hr>
+  <p class="lead">Steps:</p>
+  <div ng-repeat="step in steps" class="card card-outline-primary mb-3"
+    ng-class="{
+      'card-outline-success':step.status == 'passed',
+      'card-outline-warning':step.status == 'unstable',
+      'card-outline-danger':step.status == 'failed'
+      }">
+    <div class="card-block">
+      <blockquote class="card-blockquote">
+        <h4 class="card-title">{{step.action}}    
+          <span class="badge badge-default" ng-if="step.status == null">Didn't run</span>
+          <span class="badge badge-success" ng-if="step.status == 'passed'">Passed</span>
+          <span class="badge badge-danger" ng-if="step.status == 'failed'">Failed</span>
+          <span class="badge badge-warning badge-pill" ng-if="step.status == 'unstable'">Unstable</span>
+        </h4>
+        <p>{{step.value}}</p>
+        <p>{{step.path}}</p>
+      </blockquote>
+    </div>
+  </div>
+</div>

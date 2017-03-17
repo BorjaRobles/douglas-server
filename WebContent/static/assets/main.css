@@ -1,0 +1,56 @@
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-right: 1px solid #eee;
+}
+
+/* Sidebar navigation */
+.sidebar {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar .nav {
+  margin-bottom: 20px;
+}
+
+.sidebar .nav-item {
+  width: 100%;
+}
+
+.sidebar .nav-item + .nav-item {
+  margin-left: 0;
+}
+
+.sidebar .nav-link {
+  border-radius: 0;
+}
+
+.sidebar .products-header {
+    padding: 0 0 10px 15px;
+    font-size: 1.2rem
+}
+
+/* Main */
+.no-product-selected {
+    padding: 60px 0 60px 60px;
+    font-size: 1.7rem;
+}
+
+.section-card {
+  margin: 20px 0;
+}
+
+.btn-run {
+  margin-left: 25px;
+}

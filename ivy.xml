@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+    <info
+        organisation=""
+        module="douglas"
+        status="integration">
+	</info>
+	
+	<configurations>
+		<conf name="default" description="default jars needed for core application" />
+		<conf name="test" description="jars needed for testing" />
+	</configurations>
+
+	<dependencies>
+
+		<dependency org="org.springframework" name="spring-webmvc" rev="${spring-version}" conf="default->default"/>
+		<dependency org="org.springframework" name="spring-websocket" rev="${spring-version}" conf="default->default"/>
+		<dependency org="org.springframework" name="spring-orm" rev="${spring-version}" conf="default->default"/>
+		
+		<dependency org="org.hibernate" name="hibernate-core" rev="${hibernate-version}" conf="default->default"/>
+		
+		<dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="${jackson-version}" conf="default->default"/>
+		<dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="${jackson-version}" conf="default->default"/>
+
+		<dependency org="org.apache.commons" name="commons-lang3" rev="${commons-lang3-version}" conf="default->default"/>
+		<dependency org="commons-codec" name="commons-codec" rev="${commons-codec-version}" conf="default->default"/>
+		
+		<dependency org="log4j" name="log4j" rev="${log4j-version}" conf="default->default"/>
+		
+		<dependency org="mysql" name="mysql-connector-java" rev="${mysql-version}" conf="default->default"/>
+
+		<dependency org="com.googlecode.json-simple" name="json-simple" rev="${json-simple-version}" conf="default->default"/>
+		<dependency org="org.seleniumhq.selenium" name="selenium-java" rev="${selenium-java-version}" conf="default->default"/>
+		<dependency org="org.eclipse.jetty" name="jetty-webapp" rev="${jetty-webapp-version}" conf="default->default"/>
+
+		<dependency org="dom4j" name="dom4j" rev="${dom4j-version}" conf="default->default"/>
+
+		<dependency org="com.fasterxml.jackson.datatype" name="jackson-datatype-hibernate5" rev="${jackson-datatype-hibernate5-version}" conf="default->default"/>
+
+		<dependency org="junit" name="junit" rev="${junit-version}" conf="test->default"/>
+      	<dependency org="org.mockito" name="mockito-core" rev="${mockito-version}" conf="test->default"/>
+		<dependency org="org.springframework" name="spring-test" rev="${spring-version}" conf="test->default" transitive="false"/>
+
+	</dependencies>
+	
+</ivy-module>

@@ -1,0 +1,24 @@
+<ivysettings>
+	<property name="spring-version" value="4.3.3.RELEASE" />
+	<property name="hibernate-version" value="5.2.4.Final"/>
+	
+	<property name="jackson-version" value="2.7.3" />
+	<property name="commons-lang3-version" value="3.4" />
+	<property name="commons-codec-version" value="1.9" />
+	<property name="log4j-version" value="1.2.17" />
+	<property name="mysql-version" value="5.1.39" />
+	<property name="junit-version" value="4.12" />
+	<property name="mockito-version" value="1.10.19" />
+	<property name="json-simple-version" value="1.1.1" />
+	<property name="selenium-java-version" value="2.48.2" />
+	<property name="dom4j-version" value="1.6.1" />
+	<property name="jetty-webapp-version" value="9.3.14.v20161028" />
+	<property name="jackson-datatype-hibernate5-version" value="2.8.5" />
+
+
+ 	<settings defaultResolver="central"/> 
+ 	
+ 	<resolvers> 
+ 		<ibiblio name="central" m2compatible="true"/> 
+ 	</resolvers>
+</ivysettings>

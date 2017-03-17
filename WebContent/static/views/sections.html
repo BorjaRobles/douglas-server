@@ -1,0 +1,26 @@
+<div ng-controller="SectionsCtrl">
+
+  <h2>Sections of product <span ng-if="sections.length" class="btn btn-success btn-run" ng-click="run(produtId, 'product', $event)" role="button">Run all in product ▶</span></h2>
+
+  <p ng-if="!sections.length">No sections in this product yet</p>
+
+  <div class="card section-card" ng-repeat="section in sections">
+    <div class="card-header">
+      {{section.name}} <span class="btn btn-success btn-run" ng-click="run(section.id, 'section', $event)" role="button">Run all in section ▶</span>
+    </div>
+    <div class="card-block">
+      <ul class="list-group">
+        <p ng-if="!section.tests.length">No tests in section yet</p>
+        <a class="list-group-item list-group-item-action d-flex justify-content-end" ng-repeat="test in section.tests" ng-href="#/products/{{productId}}/test/{{test.id}}">
+          <strong class="mr-auto">{{test.name}}</strong>
+          <span class="badge badge-default badge-pill" ng-if="test.testStatus == null">Not run yet</span>
+          <span class="badge badge-success badge-pill" ng-if="test.testStatus == 'Passed'">Passed</span>
+          <span class="badge badge-danger badge-pill" ng-if="test.testStatus == 'Failed'">Failed</span>
+          <span class="badge badge-warning badge-pill" ng-if="test.testStatus == 'Unstable'">Unstable</span>
+                    <span class="btn btn-success btn-run" ng-click="run(test.id, 'test', $event)" role="button">Run ▶</span>
+
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>

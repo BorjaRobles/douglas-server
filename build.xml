@@ -1,0 +1,100 @@
+<project xmlns:ivy="antlib:org.apache.ivy.ant" name="douglas" default="compile">
+
+	<!-- CONFIG PARAMETERS -->
+
+	<property environment="env"/>
+
+	<property name="buildscript.home" 		value="${basedir}/buildscripts" />
+
+	<property name="app.name"      			value="douglas"/>
+	<property name="app.path"      			value="/douglas"/>
+	<property name="site.name"      		value="douglas"/>
+	<property name="app.version"   			value="1.0.0"/>
+	<property name="build.home"    			value="${basedir}/build_ant"/>
+	<property name="dist.home"     			value="${basedir}/dist" />
+	<property name="src.home"      			value="${basedir}/src/douglas" />
+	<property name="web.home"      			value="${basedir}/WebContent" />
+	<property name="build.lib" 				value="${build.home}/lib"/>
+
+	<property name="compile.debug"    		value="on"/>
+	<property name="compile.deprecation" 	value="false"/>
+	<property name="compile.optimize" 		value="true"/>
+
+	<path id="compile.classpath">
+		<fileset dir="${build.home}/lib" includes="**/*.jar"/>
+		<fileset dir="${build.home}/lib" includes="**/*.js"/>
+	</path>
+
+	<!-- TARGETS -->
+
+	<target name="prepare" depends="clean">
+
+		<!-- Create build directories as needed -->
+		<mkdir dir="${build.home}"/>
+
+		<!-- Retrieve dependencies -->
+		<mkdir dir="${build.home}/lib"/>
+
+		<ivy:configure file="ivysettings.xml" />
+		<ivy:resolve file="ivy.xml" conf="default, test" />
+		<ivy:retrieve pattern="${build.home}/lib/[artifact]-[revision].[ext]" conf="default" />
+
+		<!-- Copy static content of this web application -->
+		<copy todir="${build.home}">
+			<fileset dir="${web.home}"/>
+		</copy>
+
+		<mkdir dir="${build.home}/META-INF"/>
+
+		<copy file="${basedir}/src/log4j.properties" tofile="${build.home}/log4j.properties"/>
+		<copy file="${basedir}/src/persistence.properties" tofile="${build.home}/persistence.properties"/>
+		<copy file="${basedir}/WebContent/css-selector-generator.min.js" tofile="${build.home}/douglas/util/css-selector-generator.min.js"/>
+
+	</target>
+
+	<target name="compile" depends="prepare"
+   		description="Compile Java sources">
+
+		<!-- Compile Java classes as necessary -->
+
+		<javac srcdir="${src.home}"
+			destdir="${build.home}"
+			debug="${compile.debug}"
+			deprecation="${compile.deprecation}"
+			optimize="${compile.optimize}"
+			includeantruntime="false">
+				<classpath refid="compile.classpath" />
+				<compilerarg line="-encoding utf-8" />
+		</javac>
+
+		<!-- Copy application resources -->
+		<copy todir="${build.home}">
+			<fileset dir="${web.home}" excludes="**/*.java"/>
+		</copy>
+
+	</target>
+
+	<target name="dist" depends="compile"
+   		description="Create binary distribution">
+
+		<mkdir dir="${dist.home}"/>
+
+		<!-- Create application JAR file -->
+		<jar jarfile="${dist.home}/${app.name}.jar" basedir="${build.home}">
+			<manifest>
+				<attribute name="Main-Class" value="douglas.Douglas"/>
+			</manifest>
+			<zipgroupfileset dir="${build.lib}" includes="**/*.jar"/>
+		</jar>
+
+	</target>
+
+	<target name="clean"
+   		description="Delete old build and dist directories">
+
+		<delete dir="${build.home}"/>
+		<delete dir="${dist.home}"/>
+	</target>
+
+
+</project>
