@@ -22,10 +22,12 @@ import java.util.List;
 public class ProductDao {
 
     private SessionFactory sessionFactory;
+    private TestQueue testQueue;
 
     @Autowired
-    public ProductDao(SessionFactory sessionFactory) {
+    public ProductDao(SessionFactory sessionFactory, TestQueue testQueue) {
         this.sessionFactory = sessionFactory;
+        this.testQueue = testQueue;
     }
 
     @Transactional
@@ -47,10 +49,10 @@ public class ProductDao {
     public void run(String id) {
         List<Test> tests = allTestsInProduct(id);
 
-        TestQueue.addAll(tests);
+        testQueue.addAll(tests);
         TestExecution execution = new TestExecution();
         execution.setProductId(id);
-        TestQueue.add(execution);
+        testQueue.add(execution);
     }
 
     @Transactional

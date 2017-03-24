@@ -27,13 +27,15 @@ public class QueueProcessor {
     private TestDao testDao;
     private TestResultDao testResultDao;
     private ProductDao productDao;
+    private TestQueue testQueue;
 
 
     @Autowired
-    public QueueProcessor(TestDao testDao, TestResultDao testResultDao, ProductDao productDao) {
+    public QueueProcessor(TestDao testDao, TestResultDao testResultDao, ProductDao productDao, TestQueue testQueue) {
         this.testDao = testDao;
         this.testResultDao = testResultDao;
         this.productDao = productDao;
+        this.testQueue = testQueue;
     }
 
     @Transactional
@@ -52,10 +54,10 @@ public class QueueProcessor {
     public void scheduledProcessing() throws InterruptedException {
 
         // While the testqueue isn't empty
-        while(!TestQueue.isEmpty()) {
+        while(!testQueue.isEmpty()) {
 
             // Get next item
-            Queueable currentItem = TestQueue.nextItem();
+            Queueable currentItem = testQueue.nextItem();
 
             // If the next item is a test
             if (currentItem instanceof Test) {

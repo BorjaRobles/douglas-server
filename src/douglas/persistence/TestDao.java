@@ -18,10 +18,12 @@ import java.util.List;
 public class TestDao {
 
     private SessionFactory sessionFactory;
+    private TestQueue testQueue;
 
     @Autowired
-    public TestDao(SessionFactory sessionFactory) {
+    public TestDao(SessionFactory sessionFactory, TestQueue testQueue) {
         this.sessionFactory = sessionFactory;
+        this.testQueue = testQueue;
     }
 
     @Transactional
@@ -85,7 +87,7 @@ public class TestDao {
             throw new PersistenceException(String.format("Unknown id '%s' for Test", testId));
         }
 
-        TestQueue.add(test);
+        testQueue.add(test);
     }
 
 }

@@ -18,10 +18,12 @@ import java.util.List;
 public class SectionDao {
 
     private SessionFactory sessionFactory;
+    private TestQueue testQueue;
 
     @Autowired
-    public SectionDao(SessionFactory sessionFactory) {
+    public SectionDao(SessionFactory sessionFactory, TestQueue testQueue) {
         this.sessionFactory = sessionFactory;
+        this.testQueue = testQueue;
     }
 
     public Section findById(String id) {
@@ -44,7 +46,7 @@ public class SectionDao {
 
         List<Test> tests = query.getResultList();
 
-        TestQueue.addAll(tests);
+        testQueue.addAll(tests);
     }
 
     public List<Section> allSectionsByProductId(String productId) {

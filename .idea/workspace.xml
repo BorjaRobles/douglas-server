@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c4c4bbc5-5f87-448c-99e6-6e43c2a40db4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/douglas.jar" afterPath="$PROJECT_DIR$/dist/douglas.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/static/assets/main.js" afterPath="$PROJECT_DIR$/WebContent/static/assets/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/domain/Test.java" afterPath="$PROJECT_DIR$/src/douglas/domain/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/domain/TestResult.java" afterPath="$PROJECT_DIR$/src/douglas/domain/TestResult.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/persistence/ProductDao.java" afterPath="$PROJECT_DIR$/src/douglas/persistence/ProductDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/persistence/SectionDao.java" afterPath="$PROJECT_DIR$/src/douglas/persistence/SectionDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/persistence/TestDao.java" afterPath="$PROJECT_DIR$/src/douglas/persistence/TestDao.java" />
@@ -45,6 +42,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="TestQueue.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/TestQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="QueueProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/douglas/web/controller/QueueProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -55,17 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebAppInitializer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/douglas/spring/config/WebAppInitializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ivy.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ivy.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ivy.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -255,12 +252,12 @@
         <option value="$PROJECT_DIR$/src/douglas/testrunner/TestStepElement.java" />
         <option value="$PROJECT_DIR$/src/douglas/testrunner/actions/ActionAssertContainsText.java" />
         <option value="$PROJECT_DIR$/src/douglas/testrunner/LocatedElement.java" />
-        <option value="$PROJECT_DIR$/src/douglas/testrunner/TestQueue.java" />
         <option value="$PROJECT_DIR$/src/douglas/spring/config/RootConfig.java" />
         <option value="$PROJECT_DIR$/src/douglas/web/controller/QueueProcessor.java" />
         <option value="$PROJECT_DIR$/src/douglas/persistence/TestDao.java" />
         <option value="$PROJECT_DIR$/src/douglas/persistence/SectionDao.java" />
         <option value="$PROJECT_DIR$/src/douglas/persistence/ProductDao.java" />
+        <option value="$PROJECT_DIR$/src/douglas/testrunner/TestQueue.java" />
       </list>
     </option>
   </component>
@@ -681,7 +678,7 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="TestQue&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/TestQueue.java&#10;TestQueue&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/TestQueue.java&#10;build&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/build.xml&#10;ActionD&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/ActionDispatcher.java&#10;ElementL&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/ElementLocaterEngine.java&#10;test&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/domain/Test.java&#10;test.java&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/domain/Test.java&#10;proper&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/persistence.properties&#10;persistence.&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/persistence.properties&#10;SectionDao&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/persistence/SectionDao.java&#10;webconfi&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;configurationPa&#9;PSI&#9;JAVA://douglas.util.ConfigurationParser&#10;index&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/WebContent/WEB-INF/index.html&#10;Test&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/domain/Test.java&#10;webconfig&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;WebCon&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;que&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/web/controller/QueueProcessor.java&#10;buil&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/build.xml&#10;ElementLo&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/ElementLocaterEngine.java&#10;Queu&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/web/controller/QueueProcessor.java&#10;main&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/web/controller/MainController.java&#10;Webc&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;webc&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;MetaHand&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/MetaHandler.java&#10;fjol.html&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/static/fjol.html&#10;webdriverEx&#9;FILE&#9;jar:///Users/mads/Dropbox/AU/Speciale/douglas/build_ant/WEB-INF/lib/selenium-api-2.48.2.jar!/org/openqa/selenium/WebDriverException.class&#10;testresult&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/persistence/TestResultDao.java&#10;RemoteDriver&#9;PSI&#9;JAVA://org.openqa.selenium.remote.RemoteWebDriver&#10;testda&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/persistence/TestDao.java&#10;root&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/RootConfig.java&#10;FileNotF&#9;PSI&#9;JAVA://java.io.FileNotFoundException" />
+    <property name="SearchEverywhereHistoryKey" value="testqueu&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/TestQueue.java&#10;TestQue&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/TestQueue.java&#10;TestQueue&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/TestQueue.java&#10;build&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/build.xml&#10;ActionD&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/ActionDispatcher.java&#10;ElementL&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/ElementLocaterEngine.java&#10;test&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/domain/Test.java&#10;test.java&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/domain/Test.java&#10;proper&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/persistence.properties&#10;persistence.&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/persistence.properties&#10;SectionDao&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/persistence/SectionDao.java&#10;webconfi&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;configurationPa&#9;PSI&#9;JAVA://douglas.util.ConfigurationParser&#10;index&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/WebContent/WEB-INF/index.html&#10;Test&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/domain/Test.java&#10;webconfig&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;WebCon&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;que&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/web/controller/QueueProcessor.java&#10;buil&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/build.xml&#10;ElementLo&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/ElementLocaterEngine.java&#10;Queu&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/web/controller/QueueProcessor.java&#10;main&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/web/controller/MainController.java&#10;Webc&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;webc&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/WebConfig.java&#10;MetaHand&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/testrunner/MetaHandler.java&#10;fjol.html&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/static/fjol.html&#10;webdriverEx&#9;FILE&#9;jar:///Users/mads/Dropbox/AU/Speciale/douglas/build_ant/WEB-INF/lib/selenium-api-2.48.2.jar!/org/openqa/selenium/WebDriverException.class&#10;testresult&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/persistence/TestResultDao.java&#10;RemoteDriver&#9;PSI&#9;JAVA://org.openqa.selenium.remote.RemoteWebDriver&#10;testda&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/persistence/TestDao.java&#10;root&#9;FILE&#9;file:///Users/mads/Dropbox/AU/Speciale/douglas/src/douglas/spring/config/RootConfig.java&#10;FileNotF&#9;PSI&#9;JAVA://java.io.FileNotFoundException" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v6.3.1/bin/node" />
     <property name="js.eslint.eslintPackage" value="$USER_HOME$/.nvm/versions/node/v6.3.1/lib/node_modules/eslint" />
@@ -1251,7 +1248,7 @@
       <workItem from="1487502863052" duration="2471000" />
       <workItem from="1487669511496" duration="9000" />
       <workItem from="1490028247802" duration="4806000" />
-      <workItem from="1490356359748" duration="3029000" />
+      <workItem from="1490356359748" duration="3237000" />
     </task>
     <servers />
   </component>
@@ -1288,7 +1285,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225158000" />
+    <option name="totallyTimeSpent" value="225366000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1711,14 +1708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/TestQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/douglas/spring/config/WebAppInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -1800,6 +1789,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="30" column="101" lean-forward="true" selection-start-line="30" selection-start-column="101" selection-end-line="30" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/TestQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>

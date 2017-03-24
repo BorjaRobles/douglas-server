@@ -4,6 +4,7 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
+import douglas.testrunner.TestQueue;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -43,6 +44,11 @@ public class RootConfig {
         dataSource.setPassword(env.getProperty("persistence.connection.password"));
 
         return dataSource;
+    }
+
+    @Bean
+    public TestQueue testQueue() {
+        return new TestQueue();
     }
 
     @Bean

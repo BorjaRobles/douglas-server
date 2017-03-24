@@ -3,28 +3,30 @@ package douglas.testrunner;
 import douglas.domain.Test;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class TestQueue {
 
-    private static List<Queueable> items = new ArrayList<>();
+    // Specifying all the methods as 'synchronized' to cope
+    // with concurrency memory issues
+    private List<Queueable> items = new LinkedList<>();
 
-    public static boolean isEmpty() {
+    public synchronized boolean isEmpty() {
         return items.isEmpty();
     }
 
-    public static Queueable nextItem() {
-        if(isEmpty()) return null;
+    public synchronized Queueable nextItem() {
         Queueable currentItem = items.get(0);
         items.remove(0);
         return currentItem;
     }
 
-    public static void addAll(List<Test> newItems) {
+    public synchronized void addAll(List<? extends Queueable> newItems) {
         items.addAll(newItems);
     }
 
-    public static void add(Queueable newItem) {
+    public synchronized void add(Queueable newItem) {
         items.add(newItem);
     }
 
