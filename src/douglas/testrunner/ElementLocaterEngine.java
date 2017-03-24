@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ElementLocaterEngine {
 
-    public TestStep createSuggestion(WebDriver driver, JSONObject step, String newCssSelector) {
+    public LocatedElement createSuggestion(WebDriver driver, JSONObject step, String newCssSelector) {
         JSONObject suggestion = new JSONObject();
         suggestion.put("path", newCssSelector);
         suggestion.put("meta", new MetaHandler().fetch(driver, step, newCssSelector));
@@ -22,10 +22,10 @@ public class ElementLocaterEngine {
 
         WebElement newElement = driver.findElement(By.cssSelector(newCssSelector));
 
-        return new TestStep(updatedStep, newElement);
+        return new LocatedElement(updatedStep, newElement);
     }
 
-    public TestStep find(WebDriver driver, JSONObject step) throws StepException {
+    public LocatedElement find(WebDriver driver, JSONObject step) throws StepException {
         String selector = (String)step.get("path");
 
         try {
@@ -38,7 +38,7 @@ public class ElementLocaterEngine {
                 step.put("meta", new MetaHandler().fetch(driver, step, null));
             }
 
-            return new TestStep(step, element);
+            return new LocatedElement(step, element);
         } catch(WebDriverException e) {
 
             // We try to locate the element using various meta data

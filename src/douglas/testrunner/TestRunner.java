@@ -4,10 +4,9 @@ import douglas.domain.Test;
 import douglas.domain.TestResult;
 import douglas.util.StepParser;
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -16,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TestRunner {
 
+    final static Logger logger = Logger.getLogger(TestRunner.class);
 
     public TestRunner() {}
 
@@ -68,8 +68,7 @@ public class TestRunner {
             // Catching all exceptions in order to clean up selenium resources in unhandled cases
             // This is necessary as some rare cases can cause Chrome instances to hang and accumulate
         } catch(Exception e) {
-            System.out.println("DOUGLAS ERROR - UNHANDLED EXCEPTION");
-            e.printStackTrace();
+            logger.error("DOUGLAS ERROR - UNHANDLED EXCEPTION - ", e);
         } finally {
             driver.quit();
         }

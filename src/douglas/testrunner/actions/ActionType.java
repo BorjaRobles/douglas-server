@@ -2,27 +2,20 @@ package douglas.testrunner.actions;
 
 import douglas.testrunner.ElementLocaterEngine;
 import douglas.testrunner.StepException;
-import douglas.testrunner.TestStep;
+import douglas.testrunner.LocatedElement;
 import org.json.simple.JSONObject;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ActionType extends AbstractAction {
+public class ActionType implements Action {
 
     @Override
     public JSONObject execute(WebDriver driver, JSONObject step) throws StepException {
-        super.execute(driver, step);
-
-        TestStep testStep = new ElementLocaterEngine().find(driver, step);
+        LocatedElement locatedElement = new ElementLocaterEngine().find(driver, step);
 
         String value = (String)step.get("value");
 
-        testStep.getElement().sendKeys(value);
+        locatedElement.getElement().sendKeys(value);
 
-        return testStep.getStep();
+        return locatedElement.getStep();
     }
 }
