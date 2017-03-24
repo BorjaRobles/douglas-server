@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c4c4bbc5-5f87-448c-99e6-6e43c2a40db4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/douglas.jar" afterPath="$PROJECT_DIR$/dist/douglas.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/static/assets/main.js" afterPath="$PROJECT_DIR$/WebContent/static/assets/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/persistence/ProductDao.java" afterPath="$PROJECT_DIR$/src/douglas/persistence/ProductDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/persistence/SectionDao.java" afterPath="$PROJECT_DIR$/src/douglas/persistence/SectionDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/persistence/TestDao.java" afterPath="$PROJECT_DIR$/src/douglas/persistence/TestDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/spring/config/RootConfig.java" afterPath="$PROJECT_DIR$/src/douglas/spring/config/RootConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/testrunner/TestQueue.java" afterPath="$PROJECT_DIR$/src/douglas/testrunner/TestQueue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/douglas/web/controller/QueueProcessor.java" afterPath="$PROJECT_DIR$/src/douglas/web/controller/QueueProcessor.java" />
     </list>
     <ignored path="douglas.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,9 +39,11 @@
       <file leaf-file-name="TestQueue.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/TestQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <marker date="1490362648000" expanded="true" signature="28:80" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1248,7 +1244,7 @@
       <workItem from="1487502863052" duration="2471000" />
       <workItem from="1487669511496" duration="9000" />
       <workItem from="1490028247802" duration="4806000" />
-      <workItem from="1490356359748" duration="3237000" />
+      <workItem from="1490356359748" duration="3984000" />
     </task>
     <servers />
   </component>
@@ -1285,7 +1281,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225366000" />
+    <option name="totallyTimeSpent" value="226113000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1795,9 +1791,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/douglas/testrunner/TestQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1490362648000" expanded="true" signature="28:80" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,8 +1,5 @@
 package douglas.testrunner;
 
-import douglas.domain.Test;
-
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
