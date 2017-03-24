@@ -12,7 +12,7 @@ import java.util.List;
 @Table(name="test")
 public class Test implements Queueable {
 
-    private Test() {}
+    public Test() {}
 
     public enum TestStatus {
         Running, Unstable, Failed, Passed
@@ -26,10 +26,10 @@ public class Test implements Queueable {
     @Column(name="name")
     private String name;
 
-    @Column(name="description", length = 1000)
+    @Column(name="description", columnDefinition="LONGTEXT")
     private String description;
 
-    @Column(name="steps", length = 10000)
+    @Column(name="steps", columnDefinition="LONGTEXT")
     private String steps;
 
     @Column(name="active")

@@ -22,10 +22,10 @@ public class TestResult {
     @Column(name="name")
     private String name;
 
-    @Column(name="description", length = 1000)
+    @Column(name="description", columnDefinition="LONGTEXT")
     private String description;
 
-    @Column(name="steps", length = 10000)
+    @Column(name="steps", columnDefinition="LONGTEXT")
     private String steps;
 
     @Enumerated(EnumType.STRING)
