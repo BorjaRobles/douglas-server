@@ -53,4 +53,13 @@
 
 .btn-run {
   margin-left: 25px;
+  float: right;
+}
+
+.btn-run-section {
+  margin-right: 20px;
+}
+
+.btn-run-product {
+  margin-right: 40px
 }

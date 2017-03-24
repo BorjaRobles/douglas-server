@@ -1,12 +1,12 @@
 <div ng-controller="SectionsCtrl">
 
-  <h2>Sections of product <span ng-if="sections.length" class="btn btn-success btn-run" ng-click="run(produtId, 'product', $event)" role="button">Run all in product ▶</span></h2>
+  <h2>Sections of product <span ng-if="sections.length" class="btn btn-success btn-run btn-run-product" ng-click="run(produtId, 'product', $event)" role="button">Run all in product ▶</span></h2>
 
   <p ng-if="!sections.length">No sections in this product yet</p>
 
   <div class="card section-card" ng-repeat="section in sections">
     <div class="card-header">
-      {{section.name}} <span class="btn btn-success btn-run" ng-click="run(section.id, 'section', $event)" role="button">Run all in section ▶</span>
+      {{section.name}} <span class="btn btn-success btn-run btn-run-section" ng-click="run(section.id, 'section', $event)" role="button">Run all in section ▶</span>
     </div>
     <div class="card-block">
       <ul class="list-group">
