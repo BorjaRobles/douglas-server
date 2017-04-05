@@ -10,7 +10,7 @@ import org.json.simple.JSONObject;
 
 public class MetaHandlerTest {
 
-    @org.junit.Test
+    /*@org.junit.Test
     public void transfersMetaData() {
         Test test = new Test();
         String decodedSteps = "[\n" +
@@ -55,5 +55,5 @@ public class MetaHandlerTest {
         JSONObject meta2 = (JSONObject)step2.get("meta");
         String content2 = (String)meta2.get("content");
         Assert.assertTrue("hejsa2".equals(content2));
-    }
+    }*/
 }

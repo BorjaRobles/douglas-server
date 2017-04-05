@@ -2,14 +2,13 @@ package douglas.testrunner;
 
 import douglas.domain.Test;
 import douglas.domain.TestResult;
-import douglas.util.StepParser;
-import org.apache.commons.lang3.StringEscapeUtils;
+import douglas.domain.TestStep;
 import org.apache.log4j.Logger;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
@@ -21,13 +20,13 @@ public class TestRunner {
 
     public static TestResult run(Test test) {
 
-        JSONArray steps = StepParser.parse(test.getSteps());
+        List<TestStep> steps = test.getTestSteps();
 
 
         TestResult result = new TestResult();
         WebDriver driver = new ChromeDriver();
 
-        JSONArray resultingSteps = new JSONArray();
+        List<TestStep> resultingSteps = new ArrayList<>();
         boolean unstable = false;
 
         try {
@@ -35,12 +34,11 @@ public class TestRunner {
 
             try {
                 // Iterate over steps in test
-                for(Object stepObj : steps) {
-                    JSONObject step = (JSONObject)stepObj;
-                    JSONObject resultingStep = ActionDispatcher.dispatch(driver, step);
+                for(TestStep step : steps) {
+                    TestStep resultingStep = ActionDispatcher.dispatch(driver, step);
 
                     // In case one of the steps in unstable, mark it as such (unless it of course fails at a later point)
-                    if(TestResult.TestResultStatus.Unstable.name().toLowerCase().equals(resultingStep.get("status"))) {
+                    if(TestStep.TestStepStatus.Unstable.name().equals(resultingStep.getTestStepStatus())) {
                         unstable = true;
                     }
                     resultingSteps.add(resultingStep);
@@ -73,8 +71,16 @@ public class TestRunner {
             driver.quit();
         }
 
-        String unescapedJson = StringEscapeUtils.unescapeJson(resultingSteps.toJSONString());
-        result.setSteps(unescapedJson);
+
+        // Setting Id and reference to parent to NULL in order to create new entities
+        for(TestStep testStep : resultingSteps) {
+            testStep.setId(null);
+            testStep.setParent(null);
+        }
+
+        // VIRKER DET HER OVENFOR??????????
+
+        result.setTestSteps(resultingSteps);
         result.setTest(test.getId());
         result.setName(test.getName());
         result.setDescription(test.getDescription());

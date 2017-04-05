@@ -1,6 +1,8 @@
 package douglas.testrunner;
 
+import douglas.domain.TestStep;
 import douglas.util.GenerateNewCSSSelector;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.json.simple.JSONObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,22 +13,25 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ElementLocaterEngine {
 
-    public LocatedElement createSuggestion(WebDriver driver, JSONObject step, String newCssSelector) {
+    public LocatedElement createSuggestion(WebDriver driver, TestStep step, String newCssSelector) {
         JSONObject suggestion = new JSONObject();
+        Meta meta = new MetaHandler().fetch(driver, step, newCssSelector);
         suggestion.put("path", newCssSelector);
-        suggestion.put("meta", new MetaHandler().fetch(driver, step, newCssSelector));
+        suggestion.put("metaLocationX", meta.getLocationX());
+        suggestion.put("metaLocationY", meta.getLocationY());
+        suggestion.put("metaContent", meta.getContent());
 
-        JSONObject updatedStep = step;
-        updatedStep.put("suggestion", suggestion);
-        updatedStep.put("status", ActionDispatcher.TestResultStepStatus.Unstable.name().toLowerCase());
+        String unescapedSuggestion = StringEscapeUtils.unescapeJson(suggestion.toJSONString());
+        step.setSuggestion(unescapedSuggestion);
+        step.setTestStepStatus(TestStep.TestStepStatus.Unstable);
 
         WebElement newElement = driver.findElement(By.cssSelector(newCssSelector));
 
-        return new LocatedElement(updatedStep, newElement);
+        return new LocatedElement(step, newElement);
     }
 
-    public LocatedElement find(WebDriver driver, JSONObject step) throws StepException {
-        String selector = (String)step.get("path");
+    public LocatedElement find(WebDriver driver, TestStep step) throws StepException {
+        String selector = step.getPath();
 
         try {
             // Wait maximum 10 seconds for the element to appear
@@ -34,8 +39,13 @@ public class ElementLocaterEngine {
             WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(selector)));
 
             // We don't use meta information on URL steps
-            if(!"url".equals(step.get("action"))) {
-                step.put("meta", new MetaHandler().fetch(driver, step, null));
+            if(!"ActionUrl".equals(step.getAction())) {
+                Meta meta = new MetaHandler().fetch(driver, step, null);
+                step.setMeta(meta.getLocationX(), meta.getLocationY(), meta.getContent());
+
+
+                // ER OVENSTÅENDE NOK TIL AT DEN SELV PROPAGERER ÆNDRINGERNE NED?
+                //step.put("meta", new MetaHandler().fetch(driver, step, null));
             }
 
             return new LocatedElement(step, element);
@@ -45,18 +55,14 @@ public class ElementLocaterEngine {
 
             // Try using the content of the element
             try {
-                JSONObject metaObj = (JSONObject)step.get("meta");
-                String content = (String)metaObj.get("content");
-                String newCssSelector = new GenerateNewCSSSelector().generateFromContent(driver, content);
+                String newCssSelector = new GenerateNewCSSSelector().generateFromContent(driver, step.getMetaContent());
 
                 return this.createSuggestion(driver, step, newCssSelector);
             } catch (WebDriverException wde) {}
 
             // Try using the location of the element
             try {
-                JSONObject metaObj = (JSONObject)step.get("meta");
-                JSONObject location = (JSONObject)metaObj.get("location");
-                String newCssSelector = new GenerateNewCSSSelector().generateFromLocation(driver, location);
+                String newCssSelector = new GenerateNewCSSSelector().generateFromLocation(driver, step.getMetaLocationX(), step.getMetaLocationY());
 
                 return this.createSuggestion(driver, step, newCssSelector);
             } catch (WebDriverException wde) {}
@@ -66,3 +72,7 @@ public class ElementLocaterEngine {
 
     }
 }
+/*
+
+I hvert LocatedElement & StepException skal der laves et nye element kaldet TestResultElement
+ */

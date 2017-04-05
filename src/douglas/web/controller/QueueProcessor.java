@@ -2,6 +2,7 @@ package douglas.web.controller;
 
 import douglas.domain.Test;
 import douglas.domain.TestResult;
+import douglas.domain.TestStep;
 import douglas.persistence.ProductDao;
 import douglas.persistence.TestDao;
 import douglas.persistence.TestResultDao;
@@ -16,6 +17,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -40,6 +42,16 @@ public class QueueProcessor {
     public void saveTestResultAndUpdateTest(Test currentTest, TestResult testResult) {
         testDao.update(currentTest);
         testResultDao.save(testResult);
+
+        List<TestStep> resultSteps = new ArrayList<>();
+        for(TestStep step : testResult.getTestSteps()) {
+            step.setParent(testResult.getId());
+            resultSteps.add(step);
+        }
+
+        testResult.setTestSteps(resultSteps);
+        testResultDao.save(testResult);
+        // HER SKAL MÅSKE GØRES LIDT SÅ DEN GEMMER DET HELE RIGTIGT OG MED DE RIGTIGE REFERENCER I TESTSTATUS ENTITETEN
     }
 
 
@@ -50,6 +62,9 @@ public class QueueProcessor {
 
     @Scheduled(initialDelay = 1_000, fixedDelay = 5_000) //every 5 seconds, initial delay 1 second
     public void scheduledProcessing() throws InterruptedException {
+
+        Test testtest = testDao.findById("3");
+        testQueue.add(testtest);
 
         // While the testqueue isn't empty
         while(!testQueue.isEmpty()) {

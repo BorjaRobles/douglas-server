@@ -14,6 +14,11 @@ public class Test implements Queueable {
 
     public Test() {}
 
+    public Test(String name, Long section) {
+        this.name = name;
+        this.section = section;
+    }
+
     public enum TestStatus {
         Running, Unstable, Failed, Passed
     }
@@ -29,9 +34,6 @@ public class Test implements Queueable {
     @Column(name="description", columnDefinition="LONGTEXT")
     private String description;
 
-    @Column(name="steps", columnDefinition="LONGTEXT")
-    private String steps;
-
     @Column(name="active")
     private boolean active;
 
@@ -41,6 +43,9 @@ public class Test implements Queueable {
 
     @OneToMany(mappedBy="test", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TestResult> testResults = new ArrayList<>();
+
+    @OneToMany(mappedBy="parent", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<TestStep> testSteps = new ArrayList<>();
 
     @Column(name="section_id")
     private Long section;
@@ -67,18 +72,6 @@ public class Test implements Queueable {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getSteps() {
-        return steps;
-    }
-
-    public void setSteps(String steps) throws UnsupportedEncodingException {
-        this.steps = new String(Base64.getDecoder().decode(steps), "UTF-8");
-    }
-
-    public void setDecodedSteps(String steps) {
-        this.steps = steps;
     }
 
     public boolean isActive() {
@@ -112,4 +105,14 @@ public class Test implements Queueable {
     public void setSection(Long section) {
         this.section = section;
     }
+
+    public List<TestStep> getTestSteps() {
+        return testSteps;
+    }
+
+    public void setTestSteps(List<TestStep> testSteps) {
+        this.testSteps = testSteps;
+    }
+
+
 }

@@ -1,6 +1,8 @@
 package douglas.domain;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="test_result")
@@ -23,12 +25,12 @@ public class TestResult {
     @Column(name="description", columnDefinition="LONGTEXT")
     private String description;
 
-    @Column(name="steps", columnDefinition="LONGTEXT")
-    private String steps;
-
     @Enumerated(EnumType.STRING)
     @Column(name="test_result_status")
     private TestResultStatus testResultStatus;
+
+    @OneToMany(mappedBy="parent", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<TestStep> testSteps = new ArrayList<>();
 
     @Column(name="test_id")
     private Long test;
@@ -57,14 +59,6 @@ public class TestResult {
         this.description = description;
     }
 
-    public String getSteps() {
-        return steps;
-    }
-
-    public void setSteps(String steps) {
-        this.steps = steps;
-    }
-
     public TestResultStatus getTestResultStatus() {
         return testResultStatus;
     }
@@ -79,5 +73,13 @@ public class TestResult {
 
     public void setTest(Long test) {
         this.test = test;
+    }
+
+    public List<TestStep> getTestSteps() {
+        return testSteps;
+    }
+
+    public void setTestSteps(List<TestStep> testSteps) {
+        this.testSteps = testSteps;
     }
 }

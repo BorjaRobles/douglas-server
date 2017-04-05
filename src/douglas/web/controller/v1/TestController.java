@@ -1,11 +1,17 @@
 package douglas.web.controller.v1;
 
 import douglas.domain.Test;
+import douglas.domain.TestStep;
 import douglas.persistence.TestDao;
+import douglas.util.JsonTest;
+import douglas.util.StepParser;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -45,7 +51,31 @@ public class TestController {
 
     @Transactional
     @RequestMapping(path = {"", "/"}, method = RequestMethod.POST)
-    public void createTest(@RequestBody Test test) {
+    public void createTest(@RequestBody JsonTest jsonTest) {
+        Test test = new Test(jsonTest.getName(), jsonTest.getSection());
+        // Parsing the JSON from the recorder
+        JSONArray steps = StepParser.parse(jsonTest.getSteps());
+
+        testDao.save(test);
+        List<TestStep> stepList = new ArrayList<>();
+        // Creating new TestStep entities
+        for(Object objStep : steps) {
+            JSONObject step = (JSONObject) objStep;
+            TestStep testStep = new TestStep(
+                    test.getId(),
+                    (String)step.get("action"),
+                    (String)step.get("path"),
+                    (String)step.get("value"),
+                    (Long)step.get("metaLocationX"),
+                    (Long)step.get("metaLocationY"),
+                    (String)step.get("metaContent")
+            );
+            stepList.add(testStep);
+        }
+
+        test.setTestSteps(stepList);
+        // Hibernate can't automatically set up the reference between Test and TestStep as TestStep entities
+        // also can reference a TestResult
         testDao.save(test);
     }
 

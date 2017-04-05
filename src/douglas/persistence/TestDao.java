@@ -35,6 +35,7 @@ public class TestDao {
         }
 
         Hibernate.initialize(test.getTestResults());
+        Hibernate.initialize(test.getTestSteps());
 
         return test;
     }

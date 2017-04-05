@@ -1,5 +1,6 @@
 package douglas.testrunner.actions;
 
+import douglas.domain.TestStep;
 import douglas.testrunner.ElementLocaterEngine;
 import douglas.testrunner.LocatedElement;
 import douglas.testrunner.StepException;
@@ -9,12 +10,10 @@ import org.openqa.selenium.WebDriver;
 public class ActionType implements Action {
 
     @Override
-    public JSONObject execute(WebDriver driver, JSONObject step) throws StepException {
+    public TestStep execute(WebDriver driver, TestStep step) throws StepException {
         LocatedElement locatedElement = new ElementLocaterEngine().find(driver, step);
 
-        String value = (String)step.get("value");
-
-        locatedElement.getElement().sendKeys(value);
+        locatedElement.getElement().sendKeys(step.getValue());
 
         return locatedElement.getStep();
     }

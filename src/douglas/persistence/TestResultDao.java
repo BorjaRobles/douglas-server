@@ -1,6 +1,7 @@
 package douglas.persistence;
 
 import douglas.domain.TestResult;
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -37,6 +38,7 @@ public class TestResultDao {
         if (testResult == null) {
             throw new PersistenceException(String.format("Unknown id '%s' for TestResult", id));
         }
+        Hibernate.initialize(testResult.getTestSteps());
         return testResult;
     }
 
