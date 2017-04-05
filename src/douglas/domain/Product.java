@@ -1,7 +1,5 @@
 package douglas.domain;
 
-import douglas.testrunner.Queueable;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;

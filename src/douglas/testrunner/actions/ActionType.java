@@ -1,8 +1,8 @@
 package douglas.testrunner.actions;
 
 import douglas.testrunner.ElementLocaterEngine;
-import douglas.testrunner.StepException;
 import douglas.testrunner.LocatedElement;
+import douglas.testrunner.StepException;
 import org.json.simple.JSONObject;
 import org.openqa.selenium.WebDriver;
 

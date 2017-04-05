@@ -1,6 +1,5 @@
 package douglas.persistence;
 
-import douglas.domain.Test;
 import douglas.domain.TestResult;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

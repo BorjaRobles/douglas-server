@@ -1,14 +1,12 @@
 package douglas.web.controller.v1;
 
-import java.util.List;
-
-import douglas.domain.Product;
-import douglas.domain.Section;
 import douglas.domain.Test;
 import douglas.persistence.TestDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(path = "/rest/v1/tests")

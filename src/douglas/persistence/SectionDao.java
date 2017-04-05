@@ -1,6 +1,5 @@
 package douglas.persistence;
 
-import douglas.domain.Product;
 import douglas.domain.Section;
 import douglas.domain.Test;
 import douglas.testrunner.TestQueue;

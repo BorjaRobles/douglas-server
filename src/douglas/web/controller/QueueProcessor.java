@@ -1,6 +1,5 @@
 package douglas.web.controller;
 
-import douglas.domain.Product;
 import douglas.domain.Test;
 import douglas.domain.TestResult;
 import douglas.persistence.ProductDao;
@@ -17,7 +16,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 

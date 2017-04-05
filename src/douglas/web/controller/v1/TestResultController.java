@@ -1,8 +1,6 @@
 package douglas.web.controller.v1;
 
-import douglas.domain.Test;
 import douglas.domain.TestResult;
-import douglas.persistence.TestDao;
 import douglas.persistence.TestResultDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;

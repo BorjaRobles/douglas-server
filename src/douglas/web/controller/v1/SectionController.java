@@ -1,7 +1,6 @@
 package douglas.web.controller.v1;
 
 import douglas.domain.Section;
-import douglas.domain.Test;
 import douglas.persistence.SectionDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;

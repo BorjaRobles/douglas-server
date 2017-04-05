@@ -1,8 +1,5 @@
 package douglas.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import douglas.testrunner.Queueable;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;

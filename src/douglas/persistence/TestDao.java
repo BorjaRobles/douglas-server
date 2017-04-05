@@ -1,6 +1,5 @@
 package douglas.persistence;
 
-import douglas.domain.Product;
 import douglas.domain.Test;
 import douglas.testrunner.TestQueue;
 import org.hibernate.Hibernate;
