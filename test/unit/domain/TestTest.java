@@ -10,13 +10,13 @@ public class TestTest {
         Test test = new Test();
         test.setId((long) 123);
         test.setSection((long) 1);
-        test.setTestStatus(Test.TestStatus.Failed);
+        test.setTestStatus(Test.Status.Failed);
         test.setName("Davs");
         test.setDescription("Davsdavs");
 
         Assert.assertEquals((long)test.getId(), 123);
         Assert.assertEquals((long)test.getSection(), 1);
-        Assert.assertEquals(test.getTestStatus(), Test.TestStatus.Failed);
+        Assert.assertEquals(test.getTestStatus(), Test.Status.Failed);
         Assert.assertEquals(test.getName(), "Davs");
         Assert.assertEquals(test.getDescription(), "Davsdavs");
     }

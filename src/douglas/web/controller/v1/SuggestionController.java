@@ -1,14 +1,8 @@
 package douglas.web.controller.v1;
 
 import douglas.domain.Test;
-import douglas.domain.TestResult;
 import douglas.domain.TestStep;
 import douglas.persistence.TestDao;
-import douglas.persistence.TestResultDao;
-import douglas.testrunner.ActionDispatcher;
-import douglas.util.StepParser;
-import org.apache.commons.lang3.StringEscapeUtils;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -31,37 +25,40 @@ Instead do it simply have one endpoint, the accept endpoint
 public class SuggestionController {
 
     private TestDao testDao;
-    private TestResultDao testResultDao;
 
     @Autowired
-    public SuggestionController(TestDao testDao, TestResultDao testResultDao) {
+    public SuggestionController(TestDao testDao) {
         this.testDao = testDao;
-        this.testResultDao = testResultDao;
     }
 
     // The purpose of this endpoint is to grab the suggested new CSS selector and metadata
-    // from the test result and use that information to transition the step from "unstable"
+    // from the test and use that information to transition the step from "unstable"
     // to "passed"
 
-    // Takes two parameters, the testresult ID and the index of the step we
+    // Takes two parameters, the test ID and the ID of the step we
     // want to accept the suggestion from
     @Transactional
-    @RequestMapping(path = {"/accept/{testResultId}/{index}"}, method = RequestMethod.GET)
-    public void acceptSuggestion(@PathVariable String testResultId, @PathVariable String index) {
+    @RequestMapping(path = {"/accept/{testId}/{stepId}"}, method = RequestMethod.GET)
+    public void acceptSuggestion(@PathVariable String testId, @PathVariable String stepId) {
 
-
-        // BRUG DA ID FRA ENTITETEN
-
-
-        int intIndex = Integer.parseInt(index);
-        TestResult currentResult = testResultDao.findById(testResultId);
-        Test currentTest = testDao.findById(Long.toString(currentResult.getTest()));
+        Long testStepId = Long.parseLong(stepId);
+        Test currentTest = testDao.findById(testId);
 
         // Move all data from the suggestion-property to the step of the result
-        List<TestStep> resultSteps = currentResult.getTestSteps();
         List<TestStep> testSteps = currentTest.getTestSteps();
 
-        TestStep affectedStep = resultSteps.get(intIndex);
+        // We need the index when we wanna do manipulation on the testSteps list
+        int intIndex = 0;
+        for(int i = 0; i < testSteps.size(); i++) {
+            if(testSteps.get(i).getId().equals(testStepId)) {
+                intIndex = i;
+                break;
+            }
+        }
+
+        TestStep affectedStep = testSteps.get(intIndex);
+
+        if (affectedStep == null) throw new RuntimeException("Couldn't find TestStep with Id: " + stepId);
 
         JSONParser parser = new JSONParser();
         JSONObject suggestion = new JSONObject();
@@ -71,7 +68,7 @@ public class SuggestionController {
             e.printStackTrace();
         }
 
-        affectedStep.setTestStepStatus(TestStep.TestStepStatus.Passed);
+        affectedStep.setTestStepStatus(TestStep.Status.Passed);
         affectedStep.setPath((String)suggestion.get("path"));
         affectedStep.setMetaLocationX((Long)suggestion.get("metaLocationX"));
         affectedStep.setMetaLocationY((Long)suggestion.get("metaLocationY"));
@@ -86,65 +83,43 @@ public class SuggestionController {
         // The property is not longer needed as the user accepted the suggestion
         affectedStep.setSuggestion(null);
 
-        resultSteps.remove(intIndex);
-        resultSteps.add(intIndex, affectedStep);
-        currentResult.setTestSteps(resultSteps);
-
-
-        // We have now accepted the suggestion in the test result meaning that the step
-        // is now "passed" but it isn't enough that the test result knows the accepted
-        // suggestion, we also need to add the new CSS selecter and meta data to the
-        // actual test
-
-
-        // Also apply that updated step to the actual test case
-
-        // Remove unnecessary keys
-        TestStep strippedAffectedStep = new TestStep(
-                currentTest.getId(),
-                affectedStep.getAction(),
-                affectedStep.getPath(),
-                affectedStep.getValue(),
-                affectedStep.getMetaLocationX(),
-                affectedStep.getMetaLocationY(),
-                affectedStep.getMetaContent());
-
         testSteps.remove(intIndex);
-        testSteps.add(intIndex, strippedAffectedStep);
+        testSteps.add(intIndex, affectedStep);
         currentTest.setTestSteps(testSteps);
+
+
+        // We have now accepted the suggestion in the test meaning that the step
+        // is now "passed" but it isn't enough that the test knows that things change
+        // we perhaps also need to update the general status on the test
 
 
         boolean failed = false;
         boolean unstable = false;
 
-        // We iterate over all the steps to check if the whole test/testresult now passes or
-        // other unstable/failed steps still exists in the test/testresult
-        for(TestStep step : resultSteps) {
+        // We iterate over all the steps to check if the whole test now passes or
+        // other unstable/failed steps still exists in the test
+        for(TestStep step : testSteps) {
 
-            if(TestStep.TestStepStatus.Unstable.name().equals(step.getTestStepStatus())) {
+            if(TestStep.Status.Unstable.equals(step.getTestStepStatus())) {
                 unstable = true;
             }
 
-            if(TestStep.TestStepStatus.Failed.name().equals(step.getTestStepStatus())) {
+            if(TestStep.Status.Failed.equals(step.getTestStepStatus())) {
                 failed = true;
             }
         }
 
         // Based on the what we just found in the loop above do we set the status of the
-        // test and test result
+        // test
         if(failed) {
-            currentTest.setTestStatus(Test.TestStatus.Failed);
-            currentResult.setTestResultStatus(TestResult.TestResultStatus.Failed);
+            currentTest.setTestStatus(Test.Status.Failed);
         } else if (unstable) {
-            currentTest.setTestStatus(Test.TestStatus.Unstable);
-            currentResult.setTestResultStatus(TestResult.TestResultStatus.Unstable);
+            currentTest.setTestStatus(Test.Status.Unstable);
         } else {
-            currentTest.setTestStatus(Test.TestStatus.Passed);
-            currentResult.setTestResultStatus(TestResult.TestResultStatus.Passed);
+            currentTest.setTestStatus(Test.Status.Passed);
         }
 
         testDao.save(currentTest);
-        testResultDao.save(currentResult);
     }
 
 }

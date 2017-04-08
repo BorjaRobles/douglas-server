@@ -8,8 +8,8 @@ public class TestStep {
 
     public TestStep() {}
 
-    public TestStep(Long parent, String action, String path, String value, Long metaLocationX, Long metaLocationY, String metaContent) {
-        this.parent = parent;
+    public TestStep(Long test, String action, String path, String value, Long metaLocationX, Long metaLocationY, String metaContent) {
+        this.test = test;
         this.action = action;
         this.path = path;
         this.value = value;
@@ -24,7 +24,7 @@ public class TestStep {
         this.metaContent = content;
     }
 
-    public enum TestStepStatus {
+    public enum Status {
         Passed, Unstable, Failed
     }
 
@@ -35,7 +35,7 @@ public class TestStep {
 
     @Enumerated(EnumType.STRING)
     @Column(name="test_step_status")
-    private TestStepStatus testStepStatus;
+    private Status testStepStatus;
 
     @Column(name="action")
     private String action;
@@ -58,8 +58,8 @@ public class TestStep {
     @Column(name="suggestion", columnDefinition="LONGTEXT")
     private String suggestion;
 
-    @Column(name="parent_id")
-    private Long parent;
+    @Column(name="test_id")
+    private Long test;
 
     public Long getId() {
         return id;
@@ -69,11 +69,11 @@ public class TestStep {
         this.id = id;
     }
 
-    public TestStepStatus getTestStepStatus() {
+    public Status getTestStepStatus() {
         return testStepStatus;
     }
 
-    public void setTestStepStatus(TestStepStatus testStepStatus) {
+    public void setTestStepStatus(Status testStepStatus) {
         this.testStepStatus = testStepStatus;
     }
 
@@ -133,12 +133,12 @@ public class TestStep {
         this.suggestion = suggestion;
     }
 
-    public Long getParent() {
-        return parent;
+    public Long getTest() {
+        return test;
     }
 
-    public void setParent(Long parent) {
-        this.parent = parent;
+    public void setTest(Long test) {
+        this.test = test;
     }
 }
 

@@ -1,7 +1,6 @@
 package douglas.testrunner;
 
 import douglas.domain.Test;
-import douglas.domain.TestResult;
 import douglas.domain.TestStep;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -18,12 +17,10 @@ public class TestRunner {
 
     public TestRunner() {}
 
-    public static TestResult run(Test test) {
+    public static Test run(Test test) {
 
         List<TestStep> steps = test.getTestSteps();
 
-
-        TestResult result = new TestResult();
         WebDriver driver = new ChromeDriver();
 
         List<TestStep> resultingSteps = new ArrayList<>();
@@ -38,7 +35,7 @@ public class TestRunner {
                     TestStep resultingStep = ActionDispatcher.dispatch(driver, step);
 
                     // In case one of the steps in unstable, mark it as such (unless it of course fails at a later point)
-                    if(TestStep.TestStepStatus.Unstable.name().equals(resultingStep.getTestStepStatus())) {
+                    if(TestStep.Status.Unstable.equals(resultingStep.getTestStepStatus())) {
                         unstable = true;
                     }
                     resultingSteps.add(resultingStep);
@@ -46,9 +43,9 @@ public class TestRunner {
 
                 // If one of the steps is unstable, mark the whole test
                 if(unstable) {
-                    result.setTestResultStatus(TestResult.TestResultStatus.Unstable);
+                    test.setTestStatus(Test.Status.Unstable);
                 } else {
-                    result.setTestResultStatus(TestResult.TestResultStatus.Passed);
+                    test.setTestStatus(Test.Status.Passed);
                 }
 
             // If we catch the TestException, the test have failed
@@ -60,7 +57,7 @@ public class TestRunner {
                 for(int i = numberOfProcessedSteps; i < steps.size(); i++) {
                     resultingSteps.add(steps.get(i));
                 }
-                result.setTestResultStatus(TestResult.TestResultStatus.Failed);
+                test.setTestStatus(Test.Status.Failed);
             }
 
             // Catching all exceptions in order to clean up selenium resources in unhandled cases
@@ -71,20 +68,8 @@ public class TestRunner {
             driver.quit();
         }
 
+        test.setTestSteps(resultingSteps);
 
-        // Setting Id and reference to parent to NULL in order to create new entities
-        for(TestStep testStep : resultingSteps) {
-            testStep.setId(null);
-            testStep.setParent(null);
-        }
-
-        // VIRKER DET HER OVENFOR??????????
-
-        result.setTestSteps(resultingSteps);
-        result.setTest(test.getId());
-        result.setName(test.getName());
-        result.setDescription(test.getDescription());
-
-        return result;
+        return test;
     }
 }

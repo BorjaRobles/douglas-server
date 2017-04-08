@@ -1,16 +1,8 @@
 package douglas.testrunner;
 
-import douglas.domain.Test;
-import douglas.domain.TestResult;
 import douglas.domain.TestStep;
-import douglas.util.StepParser;
-import org.apache.commons.lang3.StringEscapeUtils;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import org.openqa.selenium.*;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class MetaHandler {
 
@@ -31,29 +23,8 @@ public class MetaHandler {
         if("ActionClick".equals(step.getAction())) {
             meta.setContent(element.getText());
         }
-
+        
         return meta;
     }
 
-    // Method that takes the updated meta information from the testresult and transfers it to the actual test
-    // This is done to make sure we always have the most up-to-date meta information on the elements
-    public Test transferMeta(Test test, TestResult testResult) {
-        List<TestStep> testResultSteps = testResult.getTestSteps();
-        List<TestStep> testSteps = test.getTestSteps();
-
-        List<TestStep> updatedTestSteps = new ArrayList<>();
-
-        for (int i = 0; i < testSteps.size(); i++) {
-            TestStep step = testSteps.get(i);
-            TestStep testResultStep = testResultSteps.get(i);
-            step.setMetaLocationX(testResultStep.getMetaLocationX());
-            step.setMetaLocationY(testResultStep.getMetaLocationY());
-            step.setMetaContent(testResultStep.getMetaContent());
-
-            updatedTestSteps.add(step);
-        }
-
-        test.setTestSteps(updatedTestSteps);
-        return test;
-    }
 }

@@ -38,7 +38,6 @@ public class TestResultDao {
         if (testResult == null) {
             throw new PersistenceException(String.format("Unknown id '%s' for TestResult", id));
         }
-        Hibernate.initialize(testResult.getTestSteps());
         return testResult;
     }
 

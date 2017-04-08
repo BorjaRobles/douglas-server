@@ -23,7 +23,7 @@ public class ElementLocaterEngine {
 
         String unescapedSuggestion = StringEscapeUtils.unescapeJson(suggestion.toJSONString());
         step.setSuggestion(unescapedSuggestion);
-        step.setTestStepStatus(TestStep.TestStepStatus.Unstable);
+        step.setTestStepStatus(TestStep.Status.Unstable);
 
         WebElement newElement = driver.findElement(By.cssSelector(newCssSelector));
 

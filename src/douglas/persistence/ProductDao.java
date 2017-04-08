@@ -49,6 +49,10 @@ public class ProductDao {
     public void run(String id) {
         List<Test> tests = allTestsInProduct(id);
 
+        for(Test test : tests) {
+            Hibernate.initialize(test.getTestSteps());
+        }
+
         testQueue.addAll(tests);
         TestExecution execution = new TestExecution();
         execution.setProductId(id);

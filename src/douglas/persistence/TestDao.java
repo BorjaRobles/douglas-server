@@ -87,6 +87,8 @@ public class TestDao {
             throw new PersistenceException(String.format("Unknown id '%s' for Test", testId));
         }
 
+        Hibernate.initialize(test.getTestSteps());
+
         testQueue.add(test);
     }
 

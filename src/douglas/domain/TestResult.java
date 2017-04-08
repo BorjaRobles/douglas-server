@@ -8,11 +8,15 @@ import java.util.List;
 @Table(name="test_result")
 public class TestResult {
 
-    public enum TestResultStatus {
-        Passed, Unstable, Failed
-    }
-
     public TestResult() {}
+
+    public TestResult(String name, String description, String steps, Test.Status testResultStatus, Long test) {
+        this.name = name;
+        this.description = description;
+        this.steps = steps;
+        this.testResultStatus = testResultStatus;
+        this.test = test;
+    }
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -25,15 +29,23 @@ public class TestResult {
     @Column(name="description", columnDefinition="LONGTEXT")
     private String description;
 
+    @Column(name="steps", columnDefinition="LONGTEXT")
+    private String steps;
+
     @Enumerated(EnumType.STRING)
     @Column(name="test_result_status")
-    private TestResultStatus testResultStatus;
-
-    @OneToMany(mappedBy="parent", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<TestStep> testSteps = new ArrayList<>();
+    private Test.Status testResultStatus;
 
     @Column(name="test_id")
     private Long test;
+
+    public String getSteps() {
+        return steps;
+    }
+
+    public void setSteps(String steps) {
+        this.steps = steps;
+    }
 
     public Long getId() {
         return id;
@@ -59,11 +71,11 @@ public class TestResult {
         this.description = description;
     }
 
-    public TestResultStatus getTestResultStatus() {
+    public Test.Status getTestResultStatus() {
         return testResultStatus;
     }
 
-    public void setTestResultStatus(TestResultStatus testResultStatus) {
+    public void setTestResultStatus(Test.Status testResultStatus) {
         this.testResultStatus = testResultStatus;
     }
 
@@ -75,11 +87,4 @@ public class TestResult {
         this.test = test;
     }
 
-    public List<TestStep> getTestSteps() {
-        return testSteps;
-    }
-
-    public void setTestSteps(List<TestStep> testSteps) {
-        this.testSteps = testSteps;
-    }
 }

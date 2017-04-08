@@ -19,8 +19,8 @@ public class Test implements Queueable {
         this.section = section;
     }
 
-    public enum TestStatus {
-        Running, Unstable, Failed, Passed
+    public enum Status {
+        Unstable, Failed, Passed
     }
 
     @Id
@@ -39,12 +39,12 @@ public class Test implements Queueable {
 
     @Enumerated(EnumType.STRING)
     @Column(name="test_status")
-    private TestStatus testStatus;
+    private Status testStatus;
 
     @OneToMany(mappedBy="test", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TestResult> testResults = new ArrayList<>();
 
-    @OneToMany(mappedBy="parent", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy="test", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TestStep> testSteps = new ArrayList<>();
 
     @Column(name="section_id")
@@ -82,11 +82,11 @@ public class Test implements Queueable {
         this.active = active;
     }
 
-    public TestStatus getTestStatus() {
+    public Status getTestStatus() {
         return testStatus;
     }
 
-    public void setTestStatus(TestStatus testStatus) {
+    public void setTestStatus(Status testStatus) {
         this.testStatus = testStatus;
     }
 

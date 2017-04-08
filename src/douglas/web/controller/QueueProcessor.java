@@ -42,16 +42,6 @@ public class QueueProcessor {
     public void saveTestResultAndUpdateTest(Test currentTest, TestResult testResult) {
         testDao.update(currentTest);
         testResultDao.save(testResult);
-
-        List<TestStep> resultSteps = new ArrayList<>();
-        for(TestStep step : testResult.getTestSteps()) {
-            step.setParent(testResult.getId());
-            resultSteps.add(step);
-        }
-
-        testResult.setTestSteps(resultSteps);
-        testResultDao.save(testResult);
-        // HER SKAL MÅSKE GØRES LIDT SÅ DEN GEMMER DET HELE RIGTIGT OG MED DE RIGTIGE REFERENCER I TESTSTATUS ENTITETEN
     }
 
 
@@ -63,9 +53,6 @@ public class QueueProcessor {
     @Scheduled(initialDelay = 1_000, fixedDelay = 5_000) //every 5 seconds, initial delay 1 second
     public void scheduledProcessing() throws InterruptedException {
 
-        Test testtest = testDao.findById("3");
-        testQueue.add(testtest);
-
         // While the testqueue isn't empty
         while(!testQueue.isEmpty()) {
 
@@ -76,23 +63,13 @@ public class QueueProcessor {
             if (currentItem instanceof Test) {
                 Test currentTest = (Test) currentItem;
 
-                TestResult result = TestRunner.run(currentTest);
+                Test returnedTest = TestRunner.run(currentTest);
 
-                // Mark the test based on the test result status
-                if (TestResult.TestResultStatus.Passed.equals(result.getTestResultStatus())) {
-                    currentTest.setTestStatus(Test.TestStatus.Passed);
-                } else if (TestResult.TestResultStatus.Failed.equals(result.getTestResultStatus())) {
-                    currentTest.setTestStatus(Test.TestStatus.Failed);
-                } else {
-                    currentTest.setTestStatus(Test.TestStatus.Unstable);
-                }
+                // Create a TestResult based on the executed test
+                TestResult result = new ResultGenerator().generate(returnedTest);
 
-                // Fetch the newest meta and apply it to the actual test
-                // we thereby have up-to-date information about the test
-                Test updatedTest = new MetaHandler().transferMeta(currentTest, result);
-                
                 // Save everything
-                saveTestResultAndUpdateTest(updatedTest, result);
+                saveTestResultAndUpdateTest(returnedTest, result);
 
             } else {
                 // Else we have a TestExecution which marks the end of a queued product test run
@@ -108,18 +85,18 @@ public class QueueProcessor {
                 List<Test> testsInProduct = this.getTestsOfproduct(idOfProduct);
 
                 boolean failed = false;
-                String status = Test.TestStatus.Passed.name();
+                String status = Test.Status.Passed.name();
 
                 // For each test in the product, check if all tests passed
                 for(Test test : testsInProduct) {
-                    if(Test.TestStatus.Unstable.equals(test.getTestStatus())) {
+                    if(Test.Status.Unstable.equals(test.getTestStatus())) {
                         if(!failed) {
-                            status = Test.TestStatus.Unstable.name();
+                            status = Test.Status.Unstable.name();
                         }
                     }
-                    if(Test.TestStatus.Failed.equals(test.getTestStatus())) {
+                    if(Test.Status.Failed.equals(test.getTestStatus())) {
                         failed = true;
-                        status = Test.TestStatus.Failed.name();
+                        status = Test.Status.Failed.name();
                     }
                 }
 
