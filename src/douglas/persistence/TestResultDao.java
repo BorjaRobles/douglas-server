@@ -1,6 +1,7 @@
 package douglas.persistence;
 
 import douglas.domain.TestResult;
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;

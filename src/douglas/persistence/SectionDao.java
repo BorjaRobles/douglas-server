@@ -45,6 +45,10 @@ public class SectionDao {
 
         List<Test> tests = query.getResultList();
 
+        for(Test test : tests) {
+            Hibernate.initialize(test.getTestSteps());
+        }
+
         testQueue.addAll(tests);
     }
 

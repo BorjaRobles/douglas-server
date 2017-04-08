@@ -81,9 +81,9 @@ public class GenerateNewCSSSelector {
     }
 
     // Craft a JavaScript string that uses elementFromPoint() and returns a CSS-selector of the located node
-    public String generateFromLocation(WebDriver driver, JSONObject location) {
-        int x = Math.toIntExact((Long)location.get("x"));
-        int y = Math.toIntExact((Long)location.get("y"));
+    public String generateFromLocation(WebDriver driver, Long Lx, Long Ly) {
+        int x = Math.toIntExact(Lx);
+        int y = Math.toIntExact(Ly);
         String jsScript = 
             String.format("return document.generator.getSelector(document.elementFromPoint(%d,%d));", x, y);
         return this.generate(driver, jsScript);

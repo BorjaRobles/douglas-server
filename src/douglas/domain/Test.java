@@ -3,9 +3,7 @@ package douglas.domain;
 import douglas.testrunner.Queueable;
 
 import javax.persistence.*;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.List;
 
 @Entity
@@ -14,8 +12,13 @@ public class Test implements Queueable {
 
     public Test() {}
 
-    public enum TestStatus {
-        Running, Unstable, Failed, Passed
+    public Test(String name, Long section) {
+        this.name = name;
+        this.section = section;
+    }
+
+    public enum Status {
+        Unstable, Failed, Passed
     }
 
     @Id
@@ -29,18 +32,18 @@ public class Test implements Queueable {
     @Column(name="description", columnDefinition="LONGTEXT")
     private String description;
 
-    @Column(name="steps", columnDefinition="LONGTEXT")
-    private String steps;
-
     @Column(name="active")
     private boolean active;
 
     @Enumerated(EnumType.STRING)
     @Column(name="test_status")
-    private TestStatus testStatus;
+    private Status testStatus;
 
     @OneToMany(mappedBy="test", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TestResult> testResults = new ArrayList<>();
+
+    @OneToMany(mappedBy="test", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<TestStep> testSteps = new ArrayList<>();
 
     @Column(name="section_id")
     private Long section;
@@ -69,18 +72,6 @@ public class Test implements Queueable {
         this.description = description;
     }
 
-    public String getSteps() {
-        return steps;
-    }
-
-    public void setSteps(String steps) throws UnsupportedEncodingException {
-        this.steps = new String(Base64.getDecoder().decode(steps), "UTF-8");
-    }
-
-    public void setDecodedSteps(String steps) {
-        this.steps = steps;
-    }
-
     public boolean isActive() {
         return active;
     }
@@ -89,11 +80,11 @@ public class Test implements Queueable {
         this.active = active;
     }
 
-    public TestStatus getTestStatus() {
+    public Status getTestStatus() {
         return testStatus;
     }
 
-    public void setTestStatus(TestStatus testStatus) {
+    public void setTestStatus(Status testStatus) {
         this.testStatus = testStatus;
     }
 
@@ -112,4 +103,14 @@ public class Test implements Queueable {
     public void setSection(Long section) {
         this.section = section;
     }
+
+    public List<TestStep> getTestSteps() {
+        return testSteps;
+    }
+
+    public void setTestSteps(List<TestStep> testSteps) {
+        this.testSteps = testSteps;
+    }
+
+
 }

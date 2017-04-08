@@ -67,6 +67,25 @@ angular.module('douglas')
   };
 }]);
 
+app.filter('action', function() {
+  return function(input) {
+    var input = input || "";
+    var out = "";
+    var out = input.replace(/^Action/i, "");
+    return out;
+  };
+})
+
+app.filter('parser', function() {
+  return function(input, property) {
+    input = input || '{}';
+    var out = '';
+    var parsedJson = JSON.parse(input);
+    out = parsedJson[property];
+    return out;
+  };
+})
+
 app.controller('SidebarCtrl', function($scope, ApiService, $routeParams) {
   ApiService.getProducts().then(function(response) {
     $scope.products = response.data;
@@ -109,7 +128,7 @@ app.controller('SectionsCtrl', function($scope, ApiService, $routeParams) {
   }
 });
 
-app.controller('ResultCtrl', function($scope, ApiService, $routeParams) {
+app.controller('ResultCtrl', function($scope, ApiService, $routeParams, actionFilter) {
   $scope.$on('$routeChangeSuccess', function(next, current) {
     $scope.productId = $routeParams.productId;
     // Fetch result of test
@@ -120,7 +139,7 @@ app.controller('ResultCtrl', function($scope, ApiService, $routeParams) {
   });
 });
 
-app.controller('TestCtrl', function($scope, ApiService, $routeParams) {
+app.controller('TestCtrl', function($scope, ApiService, $routeParams, actionFilter, parserFilter) {
   
   $scope.run = function(id, e) {
     e.preventDefault();
@@ -155,13 +174,6 @@ app.controller('TestCtrl', function($scope, ApiService, $routeParams) {
     // Fetch test based on ID in URL
     ApiService.getTest($scope.testId).then(function(response) {
       $scope.test = response.data;
-      if($scope.test.testResults.length == 0) {
-        $scope.steps = JSON.parse($scope.test.steps);
-      } else {
-        var lastResult = $scope.test.testResults[$scope.test.testResults.length - 1];
-        $scope.steps = JSON.parse(lastResult.steps);
-        $scope.currentTestResultId = lastResult.id;
-      }
     });
   });
 });

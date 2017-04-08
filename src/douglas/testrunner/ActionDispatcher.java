@@ -1,49 +1,34 @@
 package douglas.testrunner;
 
+import douglas.domain.TestStep;
 import douglas.testrunner.actions.*;
-import org.json.simple.JSONObject;
 import org.openqa.selenium.WebDriver;
 
 public class ActionDispatcher {
 
-    public enum TestResultStepStatus {
-        Passed, Unstable, Failed
-    }
+    public static TestStep dispatch(WebDriver driver, TestStep step) throws TestException {
 
-    public static JSONObject dispatch(WebDriver driver, JSONObject step) throws TestException {
+        TestStep stepResult = new TestStep();
+        Action action = null;
 
-        String action = (String)step.get("action");
-
-        JSONObject stepResult = new JSONObject();
-
-        // Switch between the different actions
+        // Switch between the different actions by using the Java Reflection API
         try {
-            switch (action) {
-                case "url":
-                    stepResult = new ActionUrl().execute(driver, step);
-                    break;
-                case "click":
-                    stepResult = new ActionClick().execute(driver, step);
-                    break;
-                case "type":
-                    stepResult = new ActionType().execute(driver, step);
-                    break;
-                case "assertContainsText":
-                    stepResult = new ActionAssertContainsText().execute(driver, step);
-                    break;
-                default:
-                    throw new RuntimeException("We should never reach this - No type specified for step: " + step.toJSONString());
-            }
+            action = (Action)Class.forName("douglas.testrunner.actions." + step.getAction()).newInstance();
+        } catch(ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+            throw new RuntimeException("We should never reach this - No type specified for step: " + step.toString());
+        }
+
+        try {
+            stepResult = action.execute(driver, step);
 
             // In case the step hasn't been deemed unstable by the element locater we set it as passed
-            String stepStatus = (String)stepResult.get("status");
-            if(!TestResultStepStatus.Unstable.name().toLowerCase().equals(stepStatus)) {
-                stepResult.put("status", TestResultStepStatus.Passed.name().toLowerCase());
+            if(!TestStep.Status.Unstable.equals(stepResult.getTestStepStatus())) {
+                stepResult.setTestStepStatus(TestStep.Status.Passed);
             }
 
         // If a step fails, we fail the test by throwing the TestException
         } catch(StepException e) {
-            step.put("status", TestResultStepStatus.Failed.name().toLowerCase());
+            step.setTestStepStatus(TestStep.Status.Failed);
 
             throw new TestException(step);
         }

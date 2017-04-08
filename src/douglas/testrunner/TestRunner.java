@@ -1,15 +1,13 @@
 package douglas.testrunner;
 
 import douglas.domain.Test;
-import douglas.domain.TestResult;
-import douglas.util.StepParser;
-import org.apache.commons.lang3.StringEscapeUtils;
+import douglas.domain.TestStep;
 import org.apache.log4j.Logger;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
@@ -19,15 +17,13 @@ public class TestRunner {
 
     public TestRunner() {}
 
-    public static TestResult run(Test test) {
+    public static Test run(Test test) {
 
-        JSONArray steps = StepParser.parse(test.getSteps());
+        List<TestStep> steps = test.getTestSteps();
 
-
-        TestResult result = new TestResult();
         WebDriver driver = new ChromeDriver();
 
-        JSONArray resultingSteps = new JSONArray();
+        List<TestStep> resultingSteps = new ArrayList<>();
         boolean unstable = false;
 
         try {
@@ -35,22 +31,23 @@ public class TestRunner {
 
             try {
                 // Iterate over steps in test
-                for(Object stepObj : steps) {
-                    JSONObject step = (JSONObject)stepObj;
-                    JSONObject resultingStep = ActionDispatcher.dispatch(driver, step);
+                for(TestStep step : steps) {
+                    TestStep resultingStep = ActionDispatcher.dispatch(driver, step);
 
-                    // In case one of the steps in unstable, mark it as such (unless it of course fails at a later point)
-                    if(TestResult.TestResultStatus.Unstable.name().toLowerCase().equals(resultingStep.get("status"))) {
+                    // In case one of the steps is unstable, remember it until
+                    // the other steps are done
+                    if(TestStep.Status.Unstable.equals(resultingStep.getTestStepStatus())) {
                         unstable = true;
                     }
+
                     resultingSteps.add(resultingStep);
                 }
 
                 // If one of the steps is unstable, mark the whole test
                 if(unstable) {
-                    result.setTestResultStatus(TestResult.TestResultStatus.Unstable);
+                    test.setTestStatus(Test.Status.Unstable);
                 } else {
-                    result.setTestResultStatus(TestResult.TestResultStatus.Passed);
+                    test.setTestStatus(Test.Status.Passed);
                 }
 
             // If we catch the TestException, the test have failed
@@ -62,10 +59,10 @@ public class TestRunner {
                 for(int i = numberOfProcessedSteps; i < steps.size(); i++) {
                     resultingSteps.add(steps.get(i));
                 }
-                result.setTestResultStatus(TestResult.TestResultStatus.Failed);
+                test.setTestStatus(Test.Status.Failed);
             }
 
-            // Catching all exceptions in order to clean up selenium resources in unhandled cases
+            // Catching all exceptions in order to clean up Selenium resources in unhandled cases
             // This is necessary as some rare cases can cause Chrome instances to hang and accumulate
         } catch(Exception e) {
             logger.error("DOUGLAS ERROR - UNHANDLED EXCEPTION - ", e);
@@ -73,12 +70,8 @@ public class TestRunner {
             driver.quit();
         }
 
-        String unescapedJson = StringEscapeUtils.unescapeJson(resultingSteps.toJSONString());
-        result.setSteps(unescapedJson);
-        result.setTest(test.getId());
-        result.setName(test.getName());
-        result.setDescription(test.getDescription());
+        test.setTestSteps(resultingSteps);
 
-        return result;
+        return test;
     }
 }

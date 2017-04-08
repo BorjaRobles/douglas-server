@@ -35,6 +35,7 @@ public class TestDao {
         }
 
         Hibernate.initialize(test.getTestResults());
+        Hibernate.initialize(test.getTestSteps());
 
         return test;
     }
@@ -85,6 +86,8 @@ public class TestDao {
         if (test == null) {
             throw new PersistenceException(String.format("Unknown id '%s' for Test", testId));
         }
+
+        Hibernate.initialize(test.getTestSteps());
 
         testQueue.add(test);
     }

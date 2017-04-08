@@ -11,33 +11,34 @@
   <p>{{test.description}}<p>
   <hr>
   <p class="lead">Steps:</p>
-  <div ng-repeat="step in steps" class="card card-outline-primary mb-3"
+  <div ng-repeat="step in test.testSteps" class="card mb-3"
     ng-class="{
-      'card-outline-success':step.status == 'passed',
-      'card-outline-warning':step.status == 'unstable',
-      'card-outline-danger':step.status == 'failed'
+      'card-outline-default':step.testStepStatus == null,
+      'card-outline-success':step.testStepStatus == 'Passed',
+      'card-outline-warning':step.testStepStatus == 'Unstable',
+      'card-outline-danger':step.testStepStatus == 'Failed'
       }">
     <div class="card-block">
       <blockquote class="card-blockquote">
         <h4 class="card-title">   
-          <span class="badge badge-default" ng-if="step.status == null">Didn't run</span>
-          <span class="badge badge-success" ng-if="step.status == 'passed'">Passed</span>
-          <span class="badge badge-danger" ng-if="step.status == 'failed'">Failed</span>
-          <span class="badge badge-warning" ng-if="step.status == 'unstable'">Unstable</span>
-        {{step.action}} 
+          <span class="badge badge-default" ng-if="step.testStepStatus == null">Didn't run</span>
+          <span class="badge badge-success" ng-if="step.testStepStatus == 'Passed'">Passed</span>
+          <span class="badge badge-danger" ng-if="step.testStepStatus == 'Failed'">Failed</span>
+          <span class="badge badge-warning" ng-if="step.testStepStatus == 'Unstable'">Unstable</span>
+        {{step.action | action }} 
         </h4>
         <p ng-if="step.value"><strong>Value:</strong> {{step.value}}</p>
-        <p><strong>Selector:</strong> {{step.path}}</p>
+        <p ng-if="step.path"><strong>Selector:</strong> {{step.path}}</p>
       </blockquote>
-      <div ng-if="step.status == 'unstable'">
+      <div ng-if="step.testStepStatus == 'Unstable'">
         <hr>
         <p class="lead">The step has become unstable because things on the website have changed</p>
         <p>Douglas recovered from the changes and located the element anyway. Is the following element correct?
         <div class="card card-outline-success">
           <div class="card-block">
-            <p ng-if="step.suggestion.path"><strong>Value:</strong> {{step.suggestion.meta.content}}</p>
-            <p><strong>Selector:</strong> {{step.suggestion.path}}</p>
-            <span class="btn btn-success" ng-click="acceptSuggestion(currentTestResultId, $index, $event)" role="button">Accept suggestion</span>
+            <p ng-if="step.suggestion | parser:'metaContent'"><strong>Value:</strong> {{step.suggestion | parser:'metaContent'}}</p>
+            <p><strong>Selector:</strong> {{step.suggestion | parser:'path'}}</p>
+            <span class="btn btn-success" ng-click="acceptSuggestion(testId, step.id, $event)" role="button">Accept suggestion</span>
           </div>
         </div>
       </div>
@@ -47,7 +48,7 @@
   <p class="lead">Previous results:</p>
   <ul class="list-group">
     <p ng-if="!test.testResults.length">The test hasn't been executed before</p>
-    <a ng-if="test.steps.length" class="list-group-item list-group-item-action d-flex justify-content-end" ng-repeat="result in reverse(test.testResults)" ng-href="#/products/{{productId}}/testresult/{{result.id}}">
+    <a ng-if="test.testResults.length" class="list-group-item list-group-item-action d-flex justify-content-end" ng-repeat="result in reverse(test.testResults)" ng-href="#/products/{{productId}}/testresult/{{result.id}}">
       <strong class="mr-auto">{{result.name}} - #{{result.id}}</strong>
       <span class="badge badge-default badge-pill" ng-if="result.testResultStatus == null">Not run yet</span>
       <span class="badge badge-success badge-pill" ng-if="result.testResultStatus == 'Passed'">Passed</span>

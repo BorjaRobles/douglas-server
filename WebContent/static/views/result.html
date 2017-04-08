@@ -4,26 +4,26 @@
   <h3>Result from test case: {{result.name}}
     <span class="badge badge-success" ng-if="result.testResultStatus == 'Passed'">Passed</span>
     <span class="badge badge-danger" ng-if="result.testResultStatus == 'Failed'">Failed</span>
-    <span class="badge badge-warning badge-pill" ng-if="result.testResultStatus == 'Unstable'">Unstable</span>
+    <span class="badge badge-warning" ng-if="result.testResultStatus == 'Unstable'">Unstable</span>
   </h3>
   <hr>
   <p class="lead">Steps:</p>
   <div ng-repeat="step in steps" class="card card-outline-primary mb-3"
     ng-class="{
-      'card-outline-success':step.status == 'passed',
-      'card-outline-warning':step.status == 'unstable',
-      'card-outline-danger':step.status == 'failed'
+      'card-outline-success':step.testStepStatus == 'Passed',
+      'card-outline-warning':step.testStepStatus == 'Unstable',
+      'card-outline-danger':step.testStepStatus == 'Failed'
       }">
     <div class="card-block">
       <blockquote class="card-blockquote">
-        <h4 class="card-title">{{step.action}}    
-          <span class="badge badge-default" ng-if="step.status == null">Didn't run</span>
-          <span class="badge badge-success" ng-if="step.status == 'passed'">Passed</span>
-          <span class="badge badge-danger" ng-if="step.status == 'failed'">Failed</span>
-          <span class="badge badge-warning badge-pill" ng-if="step.status == 'unstable'">Unstable</span>
+        <h4 class="card-title">{{step.action | action}}    
+          <span class="badge badge-default" ng-if="step.testStepStatus == null">Didn't run</span>
+          <span class="badge badge-success" ng-if="step.testStepStatus == 'Passed'">Passed</span>
+          <span class="badge badge-danger" ng-if="step.testStepStatus == 'Failed'">Failed</span>
+          <span class="badge badge-warning" ng-if="step.testStepStatus == 'Unstable'">Unstable</span>
         </h4>
-        <p>{{step.value}}</p>
-        <p>{{step.path}}</p>
+        <p ng-if="step.value"><strong>Value:</strong> {{step.value}}</p>
+        <p ng-if="step.path"><strong>Selector:</strong> {{step.path}}</p>
       </blockquote>
     </div>
   </div>

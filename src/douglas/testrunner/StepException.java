@@ -1,20 +1,20 @@
 package douglas.testrunner;
 
-import org.json.simple.JSONObject;
+import douglas.domain.TestStep;
 
 public class StepException extends Throwable {
-    private JSONObject failedStep = new JSONObject();
+    private TestStep failedStep = new TestStep();
 
     public StepException(String message) {
         super(message);
     }
 
-    public StepException(JSONObject failedStep) {
+    public StepException(TestStep failedStep) {
         super();
         this.failedStep = failedStep;
     }
 
-    public JSONObject getFailedStep() {
+    public TestStep getFailedStep() {
         return this.failedStep;
     }
 }

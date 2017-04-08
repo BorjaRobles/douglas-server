@@ -2,6 +2,7 @@ package douglas.web.controller;
 
 import douglas.domain.Test;
 import douglas.domain.TestResult;
+import douglas.domain.TestStep;
 import douglas.persistence.ProductDao;
 import douglas.persistence.TestDao;
 import douglas.persistence.TestResultDao;
@@ -16,6 +17,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -61,23 +63,13 @@ public class QueueProcessor {
             if (currentItem instanceof Test) {
                 Test currentTest = (Test) currentItem;
 
-                TestResult result = TestRunner.run(currentTest);
+                Test returnedTest = TestRunner.run(currentTest);
 
-                // Mark the test based on the test result status
-                if (TestResult.TestResultStatus.Passed.equals(result.getTestResultStatus())) {
-                    currentTest.setTestStatus(Test.TestStatus.Passed);
-                } else if (TestResult.TestResultStatus.Failed.equals(result.getTestResultStatus())) {
-                    currentTest.setTestStatus(Test.TestStatus.Failed);
-                } else {
-                    currentTest.setTestStatus(Test.TestStatus.Unstable);
-                }
+                // Create a TestResult based on the executed test
+                TestResult result = new ResultGenerator().generate(returnedTest);
 
-                // Fetch the newest meta and apply it to the actual test
-                // we thereby have up-to-date information about the test
-                Test updatedTest = new MetaHandler().transferMeta(currentTest, result);
-                
                 // Save everything
-                saveTestResultAndUpdateTest(updatedTest, result);
+                saveTestResultAndUpdateTest(returnedTest, result);
 
             } else {
                 // Else we have a TestExecution which marks the end of a queued product test run
@@ -93,18 +85,18 @@ public class QueueProcessor {
                 List<Test> testsInProduct = this.getTestsOfproduct(idOfProduct);
 
                 boolean failed = false;
-                String status = Test.TestStatus.Passed.name();
+                String status = Test.Status.Passed.name();
 
                 // For each test in the product, check if all tests passed
                 for(Test test : testsInProduct) {
-                    if(Test.TestStatus.Unstable.equals(test.getTestStatus())) {
+                    if(Test.Status.Unstable.equals(test.getTestStatus())) {
                         if(!failed) {
-                            status = Test.TestStatus.Unstable.name();
+                            status = Test.Status.Unstable.name();
                         }
                     }
-                    if(Test.TestStatus.Failed.equals(test.getTestStatus())) {
+                    if(Test.Status.Failed.equals(test.getTestStatus())) {
                         failed = true;
-                        status = Test.TestStatus.Failed.name();
+                        status = Test.Status.Failed.name();
                     }
                 }
 

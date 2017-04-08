@@ -1,16 +1,22 @@
 package douglas.domain;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="test_result")
 public class TestResult {
 
-    public enum TestResultStatus {
-        Passed, Unstable, Failed
-    }
-
     public TestResult() {}
+
+    public TestResult(String name, String description, String steps, Test.Status testResultStatus, Long test) {
+        this.name = name;
+        this.description = description;
+        this.steps = steps;
+        this.testResultStatus = testResultStatus;
+        this.test = test;
+    }
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -28,10 +34,18 @@ public class TestResult {
 
     @Enumerated(EnumType.STRING)
     @Column(name="test_result_status")
-    private TestResultStatus testResultStatus;
+    private Test.Status testResultStatus;
 
     @Column(name="test_id")
     private Long test;
+
+    public String getSteps() {
+        return steps;
+    }
+
+    public void setSteps(String steps) {
+        this.steps = steps;
+    }
 
     public Long getId() {
         return id;
@@ -57,19 +71,11 @@ public class TestResult {
         this.description = description;
     }
 
-    public String getSteps() {
-        return steps;
-    }
-
-    public void setSteps(String steps) {
-        this.steps = steps;
-    }
-
-    public TestResultStatus getTestResultStatus() {
+    public Test.Status getTestResultStatus() {
         return testResultStatus;
     }
 
-    public void setTestResultStatus(TestResultStatus testResultStatus) {
+    public void setTestResultStatus(Test.Status testResultStatus) {
         this.testResultStatus = testResultStatus;
     }
 
@@ -80,4 +86,5 @@ public class TestResult {
     public void setTest(Long test) {
         this.test = test;
     }
+
 }
