@@ -34,10 +34,12 @@ public class TestRunner {
                 for(TestStep step : steps) {
                     TestStep resultingStep = ActionDispatcher.dispatch(driver, step);
 
-                    // In case one of the steps in unstable, mark it as such (unless it of course fails at a later point)
+                    // In case one of the steps is unstable, remember it until
+                    // the other steps are done
                     if(TestStep.Status.Unstable.equals(resultingStep.getTestStepStatus())) {
                         unstable = true;
                     }
+
                     resultingSteps.add(resultingStep);
                 }
 
@@ -60,7 +62,7 @@ public class TestRunner {
                 test.setTestStatus(Test.Status.Failed);
             }
 
-            // Catching all exceptions in order to clean up selenium resources in unhandled cases
+            // Catching all exceptions in order to clean up Selenium resources in unhandled cases
             // This is necessary as some rare cases can cause Chrome instances to hang and accumulate
         } catch(Exception e) {
             logger.error("DOUGLAS ERROR - UNHANDLED EXCEPTION - ", e);

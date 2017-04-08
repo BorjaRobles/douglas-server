@@ -141,12 +141,3 @@ public class TestStep {
         this.test = test;
     }
 }
-
-/*
-
-
-TestStep skal kun bruges af Test's. Alle TestResult skal bare indeholde
-en en JSON-streng med indholdet(nærmest et snapchat af den senest kørte test)
-
-
- */

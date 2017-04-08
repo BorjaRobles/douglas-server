@@ -68,6 +68,7 @@ public class SuggestionController {
             e.printStackTrace();
         }
 
+        // Use the values from the suggestion
         affectedStep.setTestStepStatus(TestStep.Status.Passed);
         affectedStep.setPath((String)suggestion.get("path"));
         affectedStep.setMetaLocationX((Long)suggestion.get("metaLocationX"));
@@ -89,8 +90,8 @@ public class SuggestionController {
 
 
         // We have now accepted the suggestion in the test meaning that the step
-        // is now "passed" but it isn't enough that the test knows that things change
-        // we perhaps also need to update the general status on the test
+        // is now "passed" but it isn't enough that the test knows that things have
+        // changed as we potentially also need to update the general status on the test
 
 
         boolean failed = false;
@@ -109,8 +110,7 @@ public class SuggestionController {
             }
         }
 
-        // Based on the what we just found in the loop above do we set the status of the
-        // test
+        // Based on the what we just found in the loop above do we set the status of the test
         if(failed) {
             currentTest.setTestStatus(Test.Status.Failed);
         } else if (unstable) {

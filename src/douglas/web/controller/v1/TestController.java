@@ -74,8 +74,6 @@ public class TestController {
         }
 
         test.setTestSteps(stepList);
-        // Hibernate can't automatically set up the reference between Test and TestStep as TestStep entities
-        // also can reference a TestResult
         testDao.save(test);
     }
 

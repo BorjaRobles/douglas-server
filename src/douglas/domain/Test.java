@@ -3,9 +3,7 @@ package douglas.domain;
 import douglas.testrunner.Queueable;
 
 import javax.persistence.*;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.List;
 
 @Entity

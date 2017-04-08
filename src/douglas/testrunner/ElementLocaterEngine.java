@@ -42,10 +42,6 @@ public class ElementLocaterEngine {
             if(!"ActionUrl".equals(step.getAction())) {
                 Meta meta = new MetaHandler().fetch(driver, step, null);
                 step.setMeta(meta.getLocationX(), meta.getLocationY(), meta.getContent());
-
-
-                // ER OVENSTÅENDE NOK TIL AT DEN SELV PROPAGERER ÆNDRINGERNE NED?
-                //step.put("meta", new MetaHandler().fetch(driver, step, null));
             }
 
             return new LocatedElement(step, element);
@@ -72,7 +68,3 @@ public class ElementLocaterEngine {
 
     }
 }
-/*
-
-I hvert LocatedElement & StepException skal der laves et nye element kaldet TestResultElement
- */

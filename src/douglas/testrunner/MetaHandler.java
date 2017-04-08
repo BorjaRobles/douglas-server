@@ -8,6 +8,9 @@ public class MetaHandler {
 
     public Meta fetch(WebDriver driver, TestStep step, String newCssSelector) {
         Meta meta = new Meta();
+
+        // Fetch metadata from an existing CSS selector or from a new CSS selector just generated
+        // by the ElementLocaterEngine
         String selector = (newCssSelector == null) ? step.getPath() : newCssSelector;
         WebElement element = driver.findElement(By.cssSelector(selector));
 

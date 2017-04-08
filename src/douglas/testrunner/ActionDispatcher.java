@@ -11,7 +11,7 @@ public class ActionDispatcher {
         TestStep stepResult = new TestStep();
         Action action = null;
 
-        // Switch between the different actions by using Java reflection
+        // Switch between the different actions by using the Java Reflection API
         try {
             action = (Action)Class.forName("douglas.testrunner.actions." + step.getAction()).newInstance();
         } catch(ClassNotFoundException | InstantiationException | IllegalAccessException e) {

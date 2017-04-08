@@ -11,7 +11,7 @@
   <p>{{test.description}}<p>
   <hr>
   <p class="lead">Steps:</p>
-  <div ng-repeat="step in test.testSteps" class="card card-outline-primary mb-3"
+  <div ng-repeat="step in test.testSteps" class="card mb-3"
     ng-class="{
       'card-outline-default':step.testStepStatus == null,
       'card-outline-success':step.testStepStatus == 'Passed',

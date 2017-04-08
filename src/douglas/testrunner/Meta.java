@@ -1,5 +1,6 @@
 package douglas.testrunner;
 
+// Object used for passing Meta-data around
 public class Meta {
 
     Long locationX;

@@ -7,9 +7,7 @@ import java.util.Base64;
 public class JsonTest {
 
     public String name;
-
     public String steps;
-
     public Long section;
 
     public String getName() {
