@@ -1,84 +1,176 @@
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+-- phpMyAdmin SQL Dump
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Apr 09, 2017 at 07:00 AM
+-- Server version: 5.6.33
+-- PHP Version: 7.0.12
 
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
-# Dump of table product
-# ------------------------------------------------------------
+--
+-- Database: `douglas`
+--
 
-DROP TABLE IF EXISTS `product`;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product`
+--
 
 CREATE TABLE `product` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` bigint(20) NOT NULL,
+  `name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-
-# Dump of table section
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `section`;
+--
+-- Table structure for table `section`
+--
 
 CREATE TABLE `section` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
-  `product_id` bigint(20) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK7q6t8flbua6luc093ttflx7u3` (`product_id`),
-  CONSTRAINT `FK7q6t8flbua6luc093ttflx7u3` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `product_id` bigint(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-
-# Dump of table test
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `test`;
+--
+-- Table structure for table `test`
+--
 
 CREATE TABLE `test` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) NOT NULL,
   `active` bit(1) DEFAULT NULL,
-  `description` varchar(1000) DEFAULT NULL,
+  `description` longtext,
   `name` varchar(255) DEFAULT NULL,
   `section_id` bigint(20) DEFAULT NULL,
-  `steps` varchar(10000) DEFAULT NULL,
-  `test_status` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FKlr83btx6fy4tst6uwlix2eguj` (`section_id`),
-  CONSTRAINT `FKlr83btx6fy4tst6uwlix2eguj` FOREIGN KEY (`section_id`) REFERENCES `section` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `test_status` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-
-# Dump of table test_result
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `test_result`;
+--
+-- Table structure for table `test_result`
+--
 
 CREATE TABLE `test_result` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `description` varchar(1000) DEFAULT NULL,
+  `id` bigint(20) NOT NULL,
+  `description` longtext,
   `name` varchar(255) DEFAULT NULL,
-  `steps` varchar(10000) DEFAULT NULL,
+  `steps` longtext,
   `test_id` bigint(20) DEFAULT NULL,
-  `test_result_status` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FKef3e8k7fgvkj4mox0lxrkf8hh` (`test_id`),
-  CONSTRAINT `FKef3e8k7fgvkj4mox0lxrkf8hh` FOREIGN KEY (`test_id`) REFERENCES `test` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `test_result_status` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
+--
+-- Table structure for table `test_step`
+--
+
+CREATE TABLE `test_step` (
+  `id` bigint(20) NOT NULL,
+  `action` varchar(255) DEFAULT NULL,
+  `metaContent` varchar(255) DEFAULT NULL,
+  `metaLocationX` bigint(20) DEFAULT NULL,
+  `metaLocationY` bigint(20) DEFAULT NULL,
+  `path` varchar(255) DEFAULT NULL,
+  `suggestion` longtext,
+  `test_id` bigint(20) DEFAULT NULL,
+  `test_step_status` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `section`
+--
+ALTER TABLE `section`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FK7q6t8flbua6luc093ttflx7u3` (`product_id`);
+
+--
+-- Indexes for table `test`
+--
+ALTER TABLE `test`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FKlr83btx6fy4tst6uwlix2eguj` (`section_id`);
+
+--
+-- Indexes for table `test_result`
+--
+ALTER TABLE `test_result`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FKef3e8k7fgvkj4mox0lxrkf8hh` (`test_id`);
+
+--
+-- Indexes for table `test_step`
+--
+ALTER TABLE `test_step`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FK1eu3xk9ulu1p77fagir0oums6` (`test_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `section`
+--
+ALTER TABLE `section`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `test`
+--
+ALTER TABLE `test`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `test_result`
+--
+ALTER TABLE `test_result`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `test_step`
+--
+ALTER TABLE `test_step`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `section`
+--
+ALTER TABLE `section`
+  ADD CONSTRAINT `FK7q6t8flbua6luc093ttflx7u3` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`);
+
+--
+-- Constraints for table `test`
+--
+ALTER TABLE `test`
+  ADD CONSTRAINT `FKlr83btx6fy4tst6uwlix2eguj` FOREIGN KEY (`section_id`) REFERENCES `section` (`id`);
+
+--
+-- Constraints for table `test_result`
+--
+ALTER TABLE `test_result`
+  ADD CONSTRAINT `FKef3e8k7fgvkj4mox0lxrkf8hh` FOREIGN KEY (`test_id`) REFERENCES `test` (`id`);
+
+--
+-- Constraints for table `test_step`
+--
+ALTER TABLE `test_step`
+  ADD CONSTRAINT `FK1eu3xk9ulu1p77fagir0oums6` FOREIGN KEY (`test_id`) REFERENCES `test` (`id`);
