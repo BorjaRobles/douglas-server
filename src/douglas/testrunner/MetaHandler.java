@@ -22,7 +22,7 @@ public class MetaHandler {
         meta.setLocationX(Long.valueOf(Math.round(x)));
         meta.setLocationY(Long.valueOf(Math.round(y)));
 
-        // Click elements can also have content
+        // Click-elements can also have content
         if("ActionClick".equals(step.getAction())) {
             meta.setContent(element.getText());
         }
