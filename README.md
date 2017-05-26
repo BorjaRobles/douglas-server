@@ -2,6 +2,8 @@
 
 The server can be started by invoking its jar-file `java -jar douglas.jar` and is available on port 8080
 
+A running example is available at: http://douglas.madskonradsen.dk:8080/
+
 ## How to install
 
 Spin up an Ubuntu server and run the following commands to setup the basic required software
