@@ -1,8 +1,6 @@
 # Douglas server
 
-The server is available on port 8080 unless specified otherwise in the arguments
-
-This can simply be controlled by passing a different port as argument `java -jar douglas.jar 4040`
+The server can be started by invoking its jar-file `java -jar douglas.jar` and is available on port 8080
 
 ## How to install
 
